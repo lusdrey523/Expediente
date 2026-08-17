@@ -1,7 +1,7 @@
 ---
 id: EMM-GOV-VERIFICATION-001
 title: EMM Verification Register
-version: 0.3.0
+version: 0.4.0
 status: Active
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
@@ -39,7 +39,8 @@ Each verification event should identify, where applicable:
 |---|---|---|---|---|
 | EMM-VER-001 | EMM GitHub traceability bootstrap | PR #1 / merge SHA `b172d374785e062cf53cdb402650a5f211ec9954` | PASS WITH CONDITIONS | Bootstrap establishes traceability infrastructure; it does not certify legal facts or source authenticity. |
 | EMM-VER-002 | Post-merge verification of EMM traceability governance layer | PR #2 / merge SHA `3f6b5222b82ac88241096a7d08cd9fbc96361199` | PASS WITH CONDITIONS | Confirmed four governance files are present on `main` and the controlled traceability layer was incorporated. Detailed record: `POST_MERGE_VERIFICATION_EMM-VER-002.md`. |
-| EMM-VER-003 | Governance/control-layer integrity verification | Main-branch control chain through PR #3 | PASS | Confirmed internal coherence, historical preservation, merge linkage, evidentiary boundary, and modular extensibility. Detailed record: `VERIFICATION_RECORD_EMM-VER-003.md`. |
+| EMM-VER-003 | Governance/control-layer integrity verification | PR #4 / merge SHA `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a` | PASS | Confirmed internal coherence, historical preservation, merge linkage, evidentiary boundary, and modular extensibility. Detailed record: `VERIFICATION_RECORD_EMM-VER-003.md`. |
+| EMM-VER-004 | Post-merge verification of governance control integrity PR | PR #4 / merge SHA `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a` | PENDING | Verification event prepared to confirm the exact accepted `main` state after PR #4. Detailed record: `POST_MERGE_VERIFICATION_EMM-VER-004.md`. |
 
 ## 4. Interpretation rule
 
