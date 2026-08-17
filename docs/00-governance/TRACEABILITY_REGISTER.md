@@ -1,7 +1,7 @@
 ---
 id: EMM-TRACE-REGISTER-001
 title: EMM Traceability Register
-version: 0.4.0
+version: 0.5.0
 status: Active
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
@@ -50,7 +50,8 @@ This repository entry records the relationship to that source package; it does n
 | Bootstrap | `EMM-BOOTSTRAP-001` | PR #1 → merge SHA `b172d374785e062cf53cdb402650a5f211ec9954` | Incorporated |
 | Minimum governance layer | `EMM-TRACE-LAYER-002` | PR #2 → merge SHA `3f6b5222b82ac88241096a7d08cd9fbc96361199` | Incorporated |
 | Post-merge verification | `EMM-VER-002` | PR #3 → merge SHA `c84ae649fd6afca59f25533ed073867cffe1a9f5` | PASS WITH CONDITIONS |
-| Governance control integrity | `EMM-VER-003` | Controlled verification branch `verification/EMM-VER-003` | PENDING PR acceptance |
+| Governance control integrity | `EMM-VER-003` | PR #4 → merge SHA `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a` | PASS |
+| Post-merge verification | `EMM-VER-004` | This controlled event | PENDING PR acceptance |
 
 ## 5. Traceability model
 
@@ -68,7 +69,8 @@ The following minimum controls are incorporated through controlled change:
 2. `EMM-GOV-VERIFICATION-001` — Verification Register.
 3. `EMM-GOV-STATUS-001` — Document Status Model.
 4. `EMM-VER-002` — Post-merge verification record for PR #2.
-5. `EMM-VER-003` — Governance control integrity verification, pending acceptance of PR #4.
+5. `EMM-VER-003` — Governance control integrity verification.
+6. `EMM-VER-004` — Post-merge verification record for PR #4, pending acceptance.
 
 These controls are intentionally modular. They may be extended by later EMM governance without invalidating historical records.
 
