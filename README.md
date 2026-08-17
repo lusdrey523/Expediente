@@ -12,9 +12,9 @@ GitHub funciona como infraestructura de trazabilidad y control de cambios. No su
 
 - **Repositorio:** `lusdrey523/Expediente`
 - **Rama principal:** `main`
-- **Último hito integrado:** PR #7 — `EMM-REPO-STATUS-001`
+- **Último hito integrado:** PR #8 — `EMM-REPO-ARCH-002`
 - **Estado de la capa Git y de gobernanza auditada:** PASS dentro del alcance definido por `INTEGRITY_AUDIT_EMM-001.md`.
-- **Cadena PR:** PR #1 → PR #7, con verificaciones post-merge incorporadas progresivamente.
+- **Cadena PR integrada:** PR #1 → PR #8, con verificaciones post-merge incorporadas progresivamente.
 - **Cadena de evidencia sustantiva:** aún en fase de incorporación y formalización.
 - **Cadena temporal:** preparada a nivel de control, con separación requerida entre tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
 
