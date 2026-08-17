@@ -85,6 +85,16 @@ Registro histórico de evolución de la infraestructura documental y de trazabil
 - Definición de dominios futuros de `docs/` sin afirmar que sus contenidos sustantivos ya estén incorporados.
 - Mantenimiento de la separación entre infraestructura de control y evidencia/documentación del caso.
 
+## PR #9 — EMM-REPO-STATUS-002
+
+**Hito:** sincronización menor del estado arquitectónico representado por la infraestructura después de PR #8.
+
+- Corrección del estado del README para identificar PR #8 como último hito integrado.
+- Actualización de la cadena PR representada de PR #1 → PR #7 a PR #1 → PR #8.
+- Aclaración de que los registros con nombres similares en `repository-governance/` y `docs/case-governance/` son registros de capas distintas y no intercambiables.
+- No se incorporan hechos, evidencias sustantivas ni análisis jurídico.
+- No se reescriben verificaciones históricas ni se modifica la cadena de hechos.
+
 ## Regla de continuidad
 
 Cada nueva evolución de infraestructura debe preservar la cadena histórica existente y documentar de forma explícita qué cambia, por qué cambia y mediante qué evento controlado se incorpora.
