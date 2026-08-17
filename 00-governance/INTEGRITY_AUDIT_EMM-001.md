@@ -1,7 +1,7 @@
 ---
 id: EMM-AUDIT-001
 title: Auditoría de Integridad General y Cadena de Evidencias/Tiempos
-version: 1.0.0
+version: 1.0.1
 status: Active
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
@@ -108,7 +108,7 @@ Si la fuente no permite determinar la hora, debe registrarse explícitamente com
 
 ### H-001 — Control temporal sustantivo aún no formalizado
 
-**Severidad: MEDIA / PREVENTIVA**
+**Severidad: MEDIA / PREVENTIVA — ABIERTO**
 
 La capa actual controla la cronología Git, pero todavía no existe un registro específico que diferencie tiempo del hecho, emisión, adquisición, observación, incorporación y verificación.
 
@@ -116,23 +116,23 @@ La capa actual controla la cronología Git, pero todavía no existe un registro 
 
 ### H-002 — Cadena de custodia documental sustantiva aún no poblada
 
-**Severidad: MEDIA / PREVENTIVA**
+**Severidad: MEDIA / PREVENTIVA — ABIERTO**
 
 El repositorio está preparado para recibir identificadores y hashes, pero todavía no existe una población sustantiva de evidencias en el estado auditado.
 
 **Acción:** incorporar evidencia de forma incremental, una unidad controlada por vez o mediante lotes formalmente identificados.
 
-### H-003 — El estado PENDING de EMM-VER-004 requiere cierre explícito
+### H-003 — Cierre de EMM-VER-004
 
-**Severidad: BAJA / CONTROL DE CONTINUIDAD**
+**Severidad: BAJA / CONTROL DE CONTINUIDAD — CERRADO**
 
-PR #5 fue mergeado correctamente, pero `EMM-VER-004` fue diseñado como registro pendiente que debe recibir un resultado posterior. El merge de PR #5 no debe confundirse con la aceptación final de su verificación.
+PR #5 fue mergeado correctamente y sus condiciones fueron verificadas. `EMM-VER-004` fue actualizado mediante esta cadena controlada de trabajo a `PASS`, preservando sus identificadores, SHA objetivo y relación con PR #4.
 
-**Acción:** este hallazgo se cierra mediante un evento posterior que verifique el estado `main` y cambie EMM-VER-004 a PASS si todos sus criterios están satisfechos.
+**Evidencia de cierre:** `POST_MERGE_VERIFICATION_EMM-VER-004.md` y `POST_MERGE_VERIFICATION_EMM-VER-005.md`.
 
 ## 9. Cadena controlada actualmente demostrable
 
-`Baseline inicial → PR #1 → merge #1 → PR #2 → merge #2 → PR #3 → merge #3 → PR #4 → merge #4 → PR #5 → merge #5 → verificación post-merge de PR #5`
+`Baseline inicial → PR #1 → merge #1 → PR #2 → merge #2 → PR #3 → merge #3 → PR #4 → merge #4 → PR #5 → merge #5 → auditoría EMM-AUDIT-001 → PR #6 → verificación post-merge EMM-VER-005`
 
 La cadena anterior es una cadena de control de cambios. La cadena de evidencia jurídica deberá acoplarse posteriormente sin alterar esta historia.
 
