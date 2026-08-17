@@ -12,17 +12,20 @@ GitHub funciona como infraestructura de trazabilidad y control de cambios. No su
 
 - **Repositorio:** `lusdrey523/Expediente`
 - **Rama principal:** `main`
-- **Último hito integrado:** PR #6 — `EMM-AUDIT-001`
+- **Último hito integrado:** PR #7 — `EMM-REPO-STATUS-001`
 - **Estado de la capa Git y de gobernanza auditada:** PASS dentro del alcance definido por `INTEGRITY_AUDIT_EMM-001.md`.
-- **Cadena PR:** PR #1 → PR #6, con verificaciones post-merge incorporadas progresivamente.
+- **Cadena PR:** PR #1 → PR #7, con verificaciones post-merge incorporadas progresivamente.
 - **Cadena de evidencia sustantiva:** aún en fase de incorporación y formalización.
 - **Cadena temporal:** preparada a nivel de control, con separación requerida entre tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
 
-## Arquitectura de evolución
+## Arquitectura
 
-La infraestructura se desarrolla de forma incremental y modular. La capa de trazabilidad y gobernanza constituye el núcleo de control sobre el cual pueden incorporarse posteriormente módulos de hechos, evidencias, documentos, verificaciones y paquetes de trabajo jurídico.
+La infraestructura distingue explícitamente dos capas:
 
-La incorporación de nuevos módulos debe conservar la trazabilidad histórica, evitar la reescritura retroactiva de verificaciones y mantener explícitos los límites de cada afirmación documental.
+- **`repository-governance/`**: gobierno, integridad, trazabilidad, verificaciones y controles de la infraestructura del repositorio.
+- **`docs/`**: documentación sustantiva del caso, organizada progresivamente en dominios como `case-foundation/`, `case-governance/`, `evidence/`, `facts/`, `documents/`, `verifications/` y `legal-analysis/`.
+
+La separación evita confundir el gobierno del repositorio con el gobierno o contenido del caso. La arquitectura detallada se encuentra en `repository-governance/REPOSITORY_ARCHITECTURE.md`.
 
 ## Principios de infraestructura
 
@@ -32,15 +35,19 @@ La incorporación de nuevos módulos debe conservar la trazabilidad histórica, 
 4. **Evolución incremental:** los nuevos componentes se acoplan progresivamente al núcleo existente sin exigir una reconstrucción de la cadena histórica.
 5. **Preservación temporal:** cuando un evento dependa del tiempo, deben conservarse los timestamps disponibles y distinguirse las distintas clases de tiempo relevantes.
 6. **Verificación explícita:** una incorporación documental no se considera equivalente a una verificación; ambas deben quedar identificadas por separado.
-7. **Interoperabilidad futura:** la infraestructura se diseña con convenciones suficientemente claras y modulares para permitir su eventual adaptación a estándares externos o institucionales, sin crear dependencia actual respecto de ellos.
+7. **Interoperabilidad futura:** la infraestructura se diseña con convenciones claras y modulares para permitir su eventual adaptación a estándares externos o institucionales, sin crear dependencia actual respecto de ellos.
 
 ## Límites
 
 La infraestructura demuestra principalmente **qué fue incorporado, cuándo fue registrado, mediante qué cambio controlado y qué estado de verificación recibió dentro del repositorio**. No convierte automáticamente esos registros en prueba de la verdad material de los hechos subyacentes.
 
+## Regla arquitectónica
+
+`repository-governance/` controla la infraestructura. `docs/` contiene el caso. El hecho de que ambos vivan dentro del mismo repositorio no elimina esta separación conceptual ni probatoria.
+
 ## Próxima evolución
 
-El siguiente desarrollo debe concentrarse en incorporar el cuerpo documental y de evidencia utilizando esta infraestructura como capa de control, preservando la separación entre:
+La siguiente expansión debe incorporar el cuerpo documental y de evidencia utilizando esta infraestructura como capa de control, preservando la separación entre:
 
 - hechos;
 - evidencias;
@@ -49,4 +56,4 @@ El siguiente desarrollo debe concentrarse en incorporar el cuerpo documental y d
 - verificaciones;
 - análisis jurídico.
 
-La estructura podrá evolucionar conforme aumente el alcance del expediente, siempre que las nuevas capas sean compatibles con la trazabilidad ya consolidada.
+Las nuevas capas deben incorporarse mediante cambios controlados y quedar reflejadas en el CHANGELOG sin alterar retrospectivamente la cadena histórica.

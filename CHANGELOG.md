@@ -73,6 +73,18 @@ Registro histórico de evolución de la infraestructura documental y de trazabil
 - Creación de este CHANGELOG para conservar una vista cronológica de la evolución de la infraestructura.
 - La actualización no modifica los documentos históricos del caso ni altera retrospectivamente verificaciones anteriores.
 
+## PR #8 — EMM-REPO-ARCH-002
+
+**Hito:** separación arquitectónica explícita entre gobierno del repositorio y documentación sustantiva del caso.
+
+- Renombrado conceptual y estructural de la capa raíz `00-governance/` a `repository-governance/`.
+- Renombrado conceptual y estructural de `docs/00-governance/` a `docs/case-governance/`.
+- Incorporación de `repository-governance/REPOSITORY_ARCHITECTURE.md` como definición formal de la arquitectura.
+- Actualización del README para reflejar la estructura vigente y la evolución modular prevista.
+- Preservación de los contenidos y SHAs de los documentos trasladados; el cambio es estructural y no reescribe su contenido histórico.
+- Definición de dominios futuros de `docs/` sin afirmar que sus contenidos sustantivos ya estén incorporados.
+- Mantenimiento de la separación entre infraestructura de control y evidencia/documentación del caso.
+
 ## Regla de continuidad
 
 Cada nueva evolución de infraestructura debe preservar la cadena histórica existente y documentar de forma explícita qué cambia, por qué cambia y mediante qué evento controlado se incorpora.
