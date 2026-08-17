@@ -1,7 +1,7 @@
 ---
 id: EMM-TRACE-REGISTER-001
 title: EMM Traceability Register
-version: 0.3.0
+version: 0.4.0
 status: Active
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
@@ -49,7 +49,8 @@ This repository entry records the relationship to that source package; it does n
 |---|---|---|---|
 | Bootstrap | `EMM-BOOTSTRAP-001` | PR #1 → merge SHA `b172d374785e062cf53cdb402650a5f211ec9954` | Incorporated |
 | Minimum governance layer | `EMM-TRACE-LAYER-002` | PR #2 → merge SHA `3f6b5222b82ac88241096a7d08cd9fbc96361199` | Incorporated |
-| Post-merge verification | `EMM-VER-002` | `POST_MERGE_VERIFICATION_EMM-VER-002.md` | PASS WITH CONDITIONS |
+| Post-merge verification | `EMM-VER-002` | PR #3 → merge SHA `c84ae649fd6afca59f25533ed073867cffe1a9f5` | PASS WITH CONDITIONS |
+| Governance control integrity | `EMM-VER-003` | Controlled verification branch `verification/EMM-VER-003` | PENDING PR acceptance |
 
 ## 5. Traceability model
 
@@ -61,18 +62,21 @@ A Git commit proves that a repository state existed at a particular point in his
 
 ## 6. Current governance layer
 
-The following minimum controls are now incorporated through controlled change:
+The following minimum controls are incorporated through controlled change:
 
 1. `EMM-GOV-PR-001` — Pull Request Control Protocol.
 2. `EMM-GOV-VERIFICATION-001` — Verification Register.
 3. `EMM-GOV-STATUS-001` — Document Status Model.
 4. `EMM-VER-002` — Post-merge verification record for PR #2.
+5. `EMM-VER-003` — Governance control integrity verification, pending acceptance of PR #4.
 
 These controls are intentionally modular. They may be extended by later EMM governance without invalidating historical records.
 
 ## 7. Scope boundary
 
 This traceability layer does not certify legal facts, evidence authenticity, immigration eligibility, or legal conclusions. Those matters require source-linked documentary verification and, where appropriate, independent legal review.
+
+This boundary is an explicit scope definition and must not be treated as a failure of the traceability mechanism.
 
 ## 8. Continuity rule
 
