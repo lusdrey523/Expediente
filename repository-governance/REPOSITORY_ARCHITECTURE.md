@@ -33,6 +33,8 @@ The separation is intentional. Repository governance describes **how the reposit
 └── CHANGELOG.md
 ```
 
+The similarly named registers under `repository-governance/` and `docs/case-governance/` are **layer-scoped records** and must not be treated as interchangeable. The former concerns repository infrastructure; the latter concerns governance of case documentation.
+
 ## Intended evolution
 
 The `docs/` layer may grow into clearly separated case domains such as:
