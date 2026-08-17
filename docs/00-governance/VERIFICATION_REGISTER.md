@@ -1,11 +1,12 @@
 ---
 id: EMM-GOV-VERIFICATION-001
 title: EMM Verification Register
-version: 0.1.0
-status: Draft
+version: 0.2.0
+status: Active
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
 created: 2026-08-17
+last_updated: 2026-08-17
 ---
 
 # EMM Verification Register
@@ -32,11 +33,12 @@ Each verification event should identify, where applicable:
 | Action | Required correction or acceptance decision |
 | Verifier | Person/process performing the check |
 
-## 3. Initial registered events
+## 3. Registered events
 
 | Verification ID | Scope | Target | Result | Notes |
 |---|---|---|---|---|
 | EMM-VER-001 | EMM GitHub traceability bootstrap | PR #1 / merge SHA `b172d374785e062cf53cdb402650a5f211ec9954` | PASS WITH CONDITIONS | Bootstrap establishes traceability infrastructure; it does not certify legal facts or source authenticity. |
+| EMM-VER-002 | Post-merge verification of EMM traceability governance layer | PR #2 / merge SHA `3f6b5222b82ac88241096a7d08cd9fbc96361199` | PASS WITH CONDITIONS | Confirmed four governance files are present on `main` and the controlled traceability layer was incorporated. Detailed record: `POST_MERGE_VERIFICATION_EMM-VER-002.md`. |
 
 ## 4. Interpretation rule
 
