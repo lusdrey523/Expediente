@@ -12,17 +12,18 @@ GitHub funciona como infraestructura de trazabilidad y control de cambios. No su
 
 - **Repositorio:** `lusdrey523/Expediente`
 - **Rama principal:** `main`
-- **Último hito integrado:** PR #8 — `EMM-REPO-ARCH-002`
+- **Último hito integrado antes de PR #10:** PR #9 — `EMM-REPO-STATUS-002`
+- **PR #10:** reconciliación de infraestructura en curso; incluye la eliminación del artefacto bootstrap `1.md`.
 - **Estado de la capa Git y de gobernanza auditada:** PASS dentro del alcance definido por `INTEGRITY_AUDIT_EMM-001.md`.
-- **Cadena PR integrada:** PR #1 → PR #8, con verificaciones post-merge incorporadas progresivamente.
-- **Cadena de evidencia sustantiva:** aún en fase de incorporación y formalización.
-- **Cadena temporal:** preparada a nivel de control, con separación requerida entre tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
+- **Cadena PR integrada:** PR #1 → PR #9.
+- **Cadena de evidencia sustantiva:** preparada a nivel de control, todavía pendiente de reconstrucción documental incremental.
+- **Cadena temporal:** control preparada a nivel de infraestructura; la cronología fáctica debe reconstruirse separando tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
 
 ## Arquitectura
 
 La infraestructura distingue explícitamente dos capas:
 
-- **`repository-governance/`**: gobierno, integridad, trazabilidad, verificaciones y controles de la infraestructura del repositorio.
+- **`repository-governance/`**: gobierno, integridad, trazabilidad, verificaciones, roadmap y controles de la infraestructura del repositorio.
 - **`docs/`**: documentación sustantiva del caso, organizada progresivamente en dominios como `case-foundation/`, `case-governance/`, `evidence/`, `facts/`, `documents/`, `verifications/` y `legal-analysis/`.
 
 La separación evita confundir el gobierno del repositorio con el gobierno o contenido del caso. La arquitectura detallada se encuentra en `repository-governance/REPOSITORY_ARCHITECTURE.md`.
@@ -41,19 +42,16 @@ La separación evita confundir el gobierno del repositorio con el gobierno o con
 
 La infraestructura demuestra principalmente **qué fue incorporado, cuándo fue registrado, mediante qué cambio controlado y qué estado de verificación recibió dentro del repositorio**. No convierte automáticamente esos registros en prueba de la verdad material de los hechos subyacentes.
 
+## Roadmap
+
+El orden de evolución está definido en `repository-governance/ROADMAP.md`. La siguiente etapa es la reconstrucción documental incremental del expediente a partir del baseline auditado.
+
+La futura interfaz para abogado, autenticación segura y arquitectura multicaso se mantienen como etapas posteriores de arquitectura. No son parte del núcleo documental actual ni se confunde GitHub Pages con el límite de seguridad para información sensible.
+
 ## Regla arquitectónica
 
 `repository-governance/` controla la infraestructura. `docs/` contiene el caso. El hecho de que ambos vivan dentro del mismo repositorio no elimina esta separación conceptual ni probatoria.
 
-## Próxima evolución
+## Continuidad
 
-La siguiente expansión debe incorporar el cuerpo documental y de evidencia utilizando esta infraestructura como capa de control, preservando la separación entre:
-
-- hechos;
-- evidencias;
-- documentos;
-- metadatos de procedencia e integridad;
-- verificaciones;
-- análisis jurídico.
-
-Las nuevas capas deben incorporarse mediante cambios controlados y quedar reflejadas en el CHANGELOG sin alterar retrospectivamente la cadena histórica.
+Las nuevas capas deben incorporarse mediante cambios controlados y quedar reflejadas en el CHANGELOG sin alterar retrospectivamente la cadena histórica. Las etapas planificadas no deben presentarse como completadas hasta contar con su correspondiente estado de aceptación/verificación.
