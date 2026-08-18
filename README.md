@@ -12,11 +12,12 @@ GitHub funciona como infraestructura de trazabilidad y control de cambios. No su
 
 - **Repositorio:** `lusdrey523/Expediente`
 - **Rama principal:** `main`
-- **Último hito integrado:** PR #10 — `EMM-REPO-RECON-003`
+- **Último hito integrado:** PR #11 — `EMM-CASE-FOUNDATION-001`
 - **Estado de la capa Git y de gobernanza auditada:** PASS dentro del alcance definido por `INTEGRITY_AUDIT_EMM-001.md`.
-- **Cadena PR integrada:** PR #1 → PR #10.
-- **Cadena de evidencia sustantiva:** preparada a nivel de control; su reconstrucción documental comienza de forma incremental en la Stage 4.
-- **Cadena temporal:** control preparada a nivel de infraestructura; la cronología fáctica debe reconstruirse separando tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
+- **Cadena PR integrada:** PR #1 → PR #11.
+- **PR actualmente en revisión:** PR #12 — `EMM-CONST-001`, todavía no integrado.
+- **Cadena de evidencia sustantiva:** preparada a nivel de control; su reconstrucción documental comienza de forma incremental en Stage 4.
+- **Cadena temporal:** preparada a nivel de infraestructura; la cronología fáctica debe reconstruirse separando tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
 
 ## Arquitectura
 
@@ -36,6 +37,7 @@ La separación evita confundir el gobierno del repositorio con el gobierno o con
 5. **Preservación temporal:** cuando un evento dependa del tiempo, deben conservarse los timestamps disponibles y distinguirse las distintas clases de tiempo relevantes.
 6. **Verificación explícita:** una incorporación documental no se considera equivalente a una verificación; ambas deben quedar identificadas por separado.
 7. **Interoperabilidad futura:** la infraestructura se diseña con convenciones claras y modulares para permitir su eventual adaptación a estándares externos o institucionales, sin crear dependencia actual respecto de ellos.
+8. **Normalización documental:** los nuevos documentos controlados deben seguir el estándar de idioma, nomenclatura y metadatos vigente; los históricos se normalizan mediante migraciones controladas.
 
 ## Límites
 
@@ -45,7 +47,9 @@ La infraestructura demuestra principalmente **qué fue incorporado, cuándo fue 
 
 El orden de evolución está definido en `repository-governance/ROADMAP.md`.
 
-La siguiente ejecución controlada corresponde a **Stage 4 / F-01 — Evidence register foundation**, cuyo primer objetivo es establecer la entrada verificable del paquete fuente auditado antes de incorporar evidencia sustantiva.
+La siguiente ejecución sustantiva corresponde a **Stage 4 / F-01 — Evidence register foundation**, cuya entrada está condicionada a disponer del paquete fuente auditado de forma verificable.
+
+La Constitución Documental y el modelo de gobernanza propuestos en PR #12 constituyen una capa transversal de gobierno. Mientras PR #12 permanezca abierto, sus instrumentos tienen estado `Proposed` y no deben tratarse como normas vigentes.
 
 La futura interfaz para abogado, autenticación segura y arquitectura multicaso se mantienen como etapas posteriores de arquitectura. No son parte del núcleo documental actual ni se confunde GitHub Pages con el límite de seguridad para información sensible.
 
@@ -53,6 +57,17 @@ La futura interfaz para abogado, autenticación segura y arquitectura multicaso 
 
 `repository-governance/` controla la infraestructura. `docs/` contiene el caso. El hecho de que ambos vivan dentro del mismo repositorio no elimina esta separación conceptual ni probatoria.
 
+## Regla de sincronización de trazabilidad
+
+Todo PR que incorpore una modificación relevante debe actualizar, dentro del mismo PR, los cuatro instrumentos de continuidad institucional:
+
+- `README.md`
+- `CHANGELOG.md`
+- `repository-governance/TRACEABILITY_REGISTER.md`
+- `repository-governance/VERIFICATION_REGISTER.md`
+
+Estos archivos representan el estado documental de la infraestructura y no deben quedar deliberadamente rezagados respecto del cambio que están documentando. La verificación post-merge de un PR se registra como un evento controlado posterior cuando corresponda; no requiere crear un PR de mera limpieza si puede integrarse de forma legítima en el siguiente cambio sustantivo.
+
 ## Continuidad
 
-Las nuevas capas deben incorporarse mediante cambios controlados y quedar reflejadas en el CHANGELOG sin alterar retrospectivamente la cadena histórica. Las etapas planificadas no deben presentarse como completadas hasta contar con su correspondiente estado de aceptación/verificación.
+Las nuevas capas deben incorporarse mediante cambios controlados y quedar reflejadas en los cuatro instrumentos de continuidad sin alterar retrospectivamente la cadena histórica. Las etapas planificadas no deben presentarse como completadas hasta contar con su correspondiente estado de aceptación/verificación.

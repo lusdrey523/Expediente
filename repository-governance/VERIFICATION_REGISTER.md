@@ -1,60 +1,72 @@
 ---
 id: EMM-GOV-VERIFICATION-001
-title: EMM Verification Register
-version: 0.5.0
+title: Registro de Verificaciones del EMM
+version: 0.6.1
 status: Active
+language: es-CL
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
-created: 2026-08-17
-last_updated: 2026-08-17
+document_type: register
+owner_role: Verifier
+created_at: 2026-08-17
+last_updated_at: 2026-08-18
 ---
 
-# EMM Verification Register
+# Registro de Verificaciones del EMM
 
-## 1. Purpose
+## 1. Propósito
 
-Provide a controlled location for recording verification events that connect source material, documentary changes, Git history and accepted states.
+Proporcionar una ubicación controlada para registrar eventos de verificación que conecten fuentes, cambios documentales, historial Git y estados aceptados.
 
-## 2. Verification record model
+## 2. Modelo de registro
 
-Each verification event should identify, where applicable:
+Cada evento de verificación debe identificar, cuando corresponda:
 
-| Field | Requirement |
+| Campo | Requisito |
 |---|---|
-| Verification ID | Unique stable identifier |
-| Date | Date of verification |
-| Scope | Exact files, evidence or state checked |
-| Source | Source document, package, official record or prior state |
-| Source hash | SHA-256 or other integrity identifier when available |
-| Target | Commit, PR, document version or repository state |
-| Method | Manual, automated, comparative or mixed |
-| Result | PASS, PASS WITH CONDITIONS, FAIL or PENDING |
-| Findings | Material observations |
-| Action | Required correction or acceptance decision |
-| Verifier | Person/process performing the check |
+| Verification ID | Identificador único y estable |
+| Fecha | Fecha de verificación |
+| Alcance | Archivos, evidencia o estado exacto comprobado |
+| Fuente | Documento fuente, paquete, registro oficial o estado previo |
+| Hash fuente | SHA-256 u otro identificador de integridad cuando exista |
+| Objetivo | Commit, PR, versión documental o estado del repositorio |
+| Método | Manual, automatizado, comparativo o mixto |
+| Resultado | PASS, PASS WITH CONDITIONS, FAIL o PENDING |
+| Hallazgos | Observaciones materiales |
+| Acción | Corrección o decisión requerida |
+| Verificador | Persona/proceso que ejecuta la comprobación |
 
-## 3. Registered events
+## 3. Eventos registrados
 
-| Verification ID | Scope | Target | Result | Notes |
+| Verification ID | Alcance | Objetivo | Resultado | Notas |
 |---|---|---|---|---|
-| EMM-VER-001 | EMM GitHub traceability bootstrap | PR #1 / merge SHA `b172d374785e062cf53cdb402650a5f211ec9954` | PASS WITH CONDITIONS | Bootstrap establishes traceability infrastructure; it does not certify legal facts or source authenticity. |
-| EMM-VER-002 | Post-merge verification of EMM traceability governance layer | PR #2 / merge SHA `3f6b5222b82ac88241096a7d08cd9fbc96361199` | PASS WITH CONDITIONS | Confirmed four governance files are present on `main` and the controlled traceability layer was incorporated. Detailed record: `POST_MERGE_VERIFICATION_EMM-VER-002.md`. |
-| EMM-VER-003 | Governance/control-layer integrity verification | PR #4 / merge SHA `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a` | PASS | Confirmed internal coherence, historical preservation, merge linkage, evidentiary boundary, and modular extensibility. Detailed record: `VERIFICATION_RECORD_EMM-VER-003.md`. |
-| EMM-VER-004 | Post-merge verification of governance control integrity PR | PR #4 / merge SHA `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a`; post-merge verification via PR #5 | PASS | Completed through the controlled state verified by PR #5. Detailed record: `POST_MERGE_VERIFICATION_EMM-VER-004.md`. |
-| EMM-VER-005 | Post-merge verification of PR #5 and resulting `main` state | PR #5 / merge SHA `fdfd1e0a7d99f9566539be2ece3833640ddfb98d` | PASS | Confirms PR #5 integration, continuity of the control chain, and preservation of the declared scope. Detailed record: `POST_MERGE_VERIFICATION_EMM-VER-005.md`. |
+| EMM-VER-001 | Bootstrap de trazabilidad GitHub del EMM | PR #1 / `b172d374785e062cf53cdb402650a5f211ec9954` | PASS WITH CONDITIONS | Establece infraestructura de trazabilidad; no certifica hechos jurídicos ni autenticidad material de fuentes. |
+| EMM-VER-002 | Verificación post-merge de la capa mínima de gobernanza | PR #2 / `3f6b5222b82ac88241096a7d08cd9fbc96361199` | PASS WITH CONDITIONS | Confirmó los cuatro controles iniciales y su incorporación en `main`. |
+| EMM-VER-003 | Integridad de la capa de gobierno/control | PR #4 / `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a` | PASS | Confirmó coherencia interna, preservación histórica y límites probatorios. |
+| EMM-VER-004 | Verificación post-merge de PR #4 | PR #4 / `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a`; verificado mediante PR #5 | PASS | Cerrado mediante el estado controlado de PR #5. |
+| EMM-VER-005 | Verificación post-merge de PR #5 y estado resultante de `main` | PR #5 / `fdfd1e0a7d99f9566539be2ece3833640ddfb98d` | PASS | Confirma integración de PR #5 y continuidad de la cadena de control. |
+| EMM-VER-006 | Verificación post-merge de PR #11 / fundación de intake documental | PR #11 / `0a94b0c19826ee3028c2e24ab46c304d488ca1c9` | PASS | Verificación de integración de infraestructura y coherencia con Stage 4/F-01. No certifica la disponibilidad o autenticidad del paquete fuente sustantivo. |
+| EMM-VER-007 | Verificación pre-merge de PR #12 / Constitución, metadatos, autoridad y sincronización | PR #12 / rama `governance/EMM-CONSTITUTION-001` | PASS | Confirma coherencia interna de la propuesta, presencia de los cuatro instrumentos de continuidad y separación entre estado documental propuesto y aceptación de merge. Este PASS se limita al estado de la rama revisada y no equivale a la aprobación del merge ni a vigencia constitucional en `main`. |
 
-## 4. Interpretation rule
+## 4. Regla de interpretación
 
-A verification result applies only to the scope explicitly recorded. A PASS for repository structure, control integrity or hash consistency must not be interpreted as a legal conclusion.
+Un resultado de verificación aplica únicamente al alcance expresamente registrado. Un PASS sobre estructura, control o consistencia de hashes no constituye una conclusión jurídica.
 
-A scope limitation is not itself a failed verification condition. Where a verification is complete for its stated scope, it may receive PASS while explicitly preserving the boundary of what was and was not verified.
+Una limitación de alcance no es por sí misma un fallo. Cuando una verificación está completa dentro de su alcance declarado, puede recibir PASS conservando explícitamente sus límites.
 
-## 5. Pending population
+## 5. Regla de sincronización con PR
 
-Substantive evidence, facts, documentary interpretations and lawyer-facing outputs will be registered here as the EMM is reconstructed from the audited source package and later verified sources.
+Cada PR que incorpore una modificación relevante debe actualizar dentro del mismo PR los cuatro instrumentos de continuidad:
 
-## 6. Continuity rule
+- `README.md`
+- `CHANGELOG.md`
+- `repository-governance/TRACEABILITY_REGISTER.md`
+- `repository-governance/VERIFICATION_REGISTER.md`
 
-Verification records are append-oriented. Historical verification entries should not be silently rewritten to reflect later conclusions. Corrections or superseding assessments must be recorded as new controlled events with explicit linkage to the prior record.
+Antes del merge, el registro puede contener una verificación de la rama propuesta. El resultado de esa verificación no debe confundirse con la aceptación del merge. La integración efectiva se acredita mediante el evento Git correspondiente y, cuando proceda, mediante una verificación post-merge posterior.
 
-Completion of an explicitly pending post-merge record is treated as a controlled lifecycle transition when the underlying historical event and its original identifiers remain preserved.
+## 6. Continuidad
+
+Los registros de verificación son orientados a anexado. Las entradas históricas no deben reescribirse silenciosamente para reflejar conclusiones posteriores. Correcciones o evaluaciones supervinientes deben registrarse como nuevos eventos vinculados al registro anterior.
+
+El cambio de estado de una verificación debe conservar su identificador, objetivo y contexto histórico originales.
