@@ -1,7 +1,7 @@
 ---
 id: EMM-TRACE-REGISTER-001
 title: Registro de Trazabilidad del EMM
-version: 0.9.0
+version: 1.0.0
 status: Active
 language: es-CL
 jurisdiction: Chile
@@ -40,12 +40,12 @@ El retiro posterior de `1.md` no elimina este registro histórico. Su existencia
 
 El bootstrap está vinculado al paquete fuente EMM previamente auditado:
 
-- Paquete fuente: `Legalbreto-main.zip`
-- SHA-256: `26f599f89d7e546deb53ad316123f16cf6683015547a7f5bc5eb2c99f628435f`
+- Paquete fuente declarado: `Legalbreto-main.zip`
+- SHA-256 declarado: `26f599f89d7e546deb53ad316123f16cf6683015547a7f5bc5eb2c99f628435f`
 - Inventario reportado: 48 archivos
-- Evaluación bootstrap: `EMM_SYSTEM_ASSESSMENT_001`
+- Evaluación asociada: `EMM_SYSTEM_ASSESSMENT_001`
 
-Esta entrada registra la relación con el paquete fuente; no afirma que el ZIP esté almacenado en este repositorio.
+Esta entrada registra la relación histórica con el paquete fuente. No afirma que el ZIP esté almacenado en este repositorio ni que haya sido re-recibido y re-hasheado durante PR #14.
 
 ## 4. Historial controlado
 
@@ -64,9 +64,12 @@ Esta entrada registra la relación con el paquete fuente; no afirma que el ZIP e
 | Reconciliación de infraestructura | `EMM-REPO-RECON-003` | PR #10 → `3cd9ba12c03d4c0a5b54d8ec6ddaf1159ae314b6` | Incorporado |
 | Fundamento de intake documental | `EMM-CASE-FOUNDATION-001` | PR #11 → `0a94b0c19826ee3028c2e24ab46c304d488ca1c9` | Incorporado |
 | Constitución y gobierno documental | `EMM-CONST-001` | PR #12 → `67d540bfcc00db3413432da334545bdf4204fb13` | Incorporado |
-| Activación de gobierno documental | `EMM-GOV-OPS-001` | PR #13 → rama `governance/EMM-OPS-001` | Propuesto / pendiente de merge |
+| Activación de gobierno documental | `EMM-GOV-OPS-001` | PR #13 → `2233cb6f2c80ba474a171a467feab278906480a5` | Incorporado |
+| Preparación de intake F-01 | `EMM-F01-SOURCE-INTAKE-001` | PR #14 → rama `documentary/EMM-F01-SOURCE-INTAKE-001` | Propuesto / pendiente de merge |
 
-PR #12 quedó efectivamente integrado en `main` el `2026-08-18T18:08:57Z`. Su head previo al merge fue `cb90898ce8ec0413777f512b0c6ee92ae59fff79`.
+PR #12 quedó integrado en `main` el `2026-08-18T18:08:57Z`.
+
+PR #13 quedó integrado en `main` el `2026-08-18T19:18:15Z`, produciendo el SHA `2233cb6f2c80ba474a171a467feab278906480a5`.
 
 Para PRs abiertos, la rama y el número de PR constituyen la referencia dinámica. El SHA exacto del head debe tomarse del estado de GitHub inmediatamente antes del merge y registrarse en el evento de integración, evitando que este registro se vuelva autorreferencialmente obsoleto por cada nuevo commit de la misma PR.
 
@@ -87,7 +90,7 @@ Cada PR que incorpore una modificación relevante debe actualizar dentro del mis
 3. `repository-governance/TRACEABILITY_REGISTER.md`
 4. `repository-governance/VERIFICATION_REGISTER.md`
 
-La actualización debe representar el estado correcto del PR: `Proposed/Pending` mientras esté abierto e `Incorporated` solamente después del merge efectivo. La verificación de la rama puede registrarse antes del merge; la integración efectiva se acredita mediante el evento Git correspondiente.
+En un PR abierto, estos instrumentos pueden describir el estado propuesto. Después del merge, el siguiente evento controlado debe reflejar el SHA real de `main` sin reescribir la historia anterior.
 
 ## 7. Alcance actual
 

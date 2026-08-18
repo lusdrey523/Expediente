@@ -12,12 +12,12 @@ GitHub funciona como infraestructura de trazabilidad y control de cambios. No su
 
 - **Repositorio:** `lusdrey523/Expediente`
 - **Rama principal:** `main`
-- **Último hito integrado:** PR #12 — `EMM-CONST-001`
-- **SHA actual de `main`:** `67d540bfcc00db3413432da334545bdf4204fb13`
-- **PR en ejecución:** PR #13 — `EMM-GOV-OPS-001`
-- **Estado de PR #13:** propuesta de activación operativa; todavía no integrada en `main`.
-- **Cadena PR integrada:** PR #1 → PR #12.
-- **Cadena de evidencia sustantiva:** preparada a nivel de control; su reconstrucción documental comienza de forma incremental en Stage 4.
+- **SHA actual de `main`:** `2233cb6f2c80ba474a171a467feab278906480a5`
+- **Último hito integrado:** PR #13 — `EMM-GOV-OPS-001`
+- **Integración de PR #13:** `2026-08-18T19:18:15Z`
+- **Cadena PR integrada:** PR #1 → PR #13.
+- **PR en ejecución:** PR #14 — `EMM-F01-SOURCE-INTAKE-001`
+- **Cadena de evidencia sustantiva:** preparada a nivel de control; F-01 continúa condicionado a la recepción verificable del paquete fuente auditado.
 - **Cadena temporal:** preparada a nivel de infraestructura; la cronología fáctica debe reconstruirse separando tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
 
 ## Arquitectura
@@ -39,7 +39,8 @@ La separación evita confundir el gobierno del repositorio con el gobierno o con
 6. **Verificación explícita:** una incorporación documental no se considera equivalente a una verificación; ambas deben quedar identificadas por separado.
 7. **Interoperabilidad futura:** la infraestructura se diseña con convenciones claras y modulares para permitir su eventual adaptación a estándares externos o institucionales, sin crear dependencia actual respecto de ellos.
 8. **Normalización documental:** los nuevos documentos controlados deben seguir el estándar de idioma, nomenclatura y metadatos vigente; los históricos se normalizan mediante migraciones controladas.
-9. **Gobernanza activa:** la Constitución, el estándar de metadatos y el modelo de autoridad rigen la infraestructura una vez activados en `main`.
+9. **Gobernanza activa:** la Constitución, el estándar de metadatos, el modelo de autoridad y el protocolo de control documental rigen la infraestructura desde su integración efectiva en `main`.
+10. **No inferencia:** ningún documento fuente, hecho, fecha o relación faltante se reconstruye por memoria, nombre de archivo o suposición cuando pueda preservarse como desconocido o pendiente de verificación.
 
 ## Límites
 
@@ -49,15 +50,9 @@ La infraestructura demuestra principalmente **qué fue incorporado, cuándo fue 
 
 El orden de evolución está definido en `repository-governance/ROADMAP.md`.
 
-La siguiente ejecución sustantiva corresponde a **Stage 4 / F-01 — Evidence register foundation**, cuya entrada está condicionada a disponer del paquete fuente auditado de forma verificable.
+El gate actual es **Stage 4 / F-01 — Evidence register foundation**. PR #11 estableció el intake; PR #12 estableció la Constitución; PR #13 activó el gobierno documental. PR #14 prepara el recibo controlado del paquete fuente sin afirmar que dicho paquete haya sido recibido o verificado en esta rama.
 
-PR #12 integró la Constitución Documental, el estándar de metadatos y el modelo de autoridad. PR #13 operacionaliza su activación y establece el protocolo de control documental sin incorporar evidencia sustantiva.
-
-La futura interfaz para abogado, autenticación segura y arquitectura multicaso se mantienen como etapas posteriores de arquitectura. No son parte del núcleo documental actual ni se confunde GitHub Pages con el límite de seguridad para información sensible.
-
-## Regla arquitectónica
-
-`repository-governance/` controla la infraestructura. `docs/` contiene el caso. El hecho de que ambos vivan dentro del mismo repositorio no elimina esta separación conceptual ni probatoria.
+La futura interfaz para abogado, autenticación segura y arquitectura multicaso permanecen como etapas posteriores. GitHub Pages puede servir como presentación, pero no constituye por sí mismo una frontera de autenticación para información sensible.
 
 ## Regla de sincronización de trazabilidad
 
@@ -68,7 +63,7 @@ Todo PR que incorpore una modificación relevante debe actualizar, dentro del mi
 - `repository-governance/TRACEABILITY_REGISTER.md`
 - `repository-governance/VERIFICATION_REGISTER.md`
 
-Estos archivos representan el estado documental de la infraestructura y no deben quedar deliberadamente rezagados respecto del cambio que están documentando. La verificación post-merge de un PR se registra como un evento controlado posterior cuando corresponda; no requiere crear un PR de mera limpieza si puede integrarse de forma legítima en el siguiente cambio sustantivo.
+Estos archivos representan el estado documental de la infraestructura. En un PR abierto pueden describir el estado propuesto del cambio; al entrar en `main`, el siguiente estado integrado debe quedar registrado en el mismo cambio controlado o en el siguiente PR legítimo, sin PRs de mera limpieza cuando la corrección pueda incorporarse con la siguiente evolución sustantiva.
 
 ## Continuidad
 
