@@ -1,7 +1,7 @@
 ---
 id: EMM-GOV-VERIFICATION-001
 title: Registro de Verificaciones del EMM
-version: 0.6.1
+version: 0.7.0
 status: Active
 language: es-CL
 jurisdiction: Chile
@@ -46,7 +46,9 @@ Cada evento de verificación debe identificar, cuando corresponda:
 | EMM-VER-004 | Verificación post-merge de PR #4 | PR #4 / `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a`; verificado mediante PR #5 | PASS | Cerrado mediante el estado controlado de PR #5. |
 | EMM-VER-005 | Verificación post-merge de PR #5 y estado resultante de `main` | PR #5 / `fdfd1e0a7d99f9566539be2ece3833640ddfb98d` | PASS | Confirma integración de PR #5 y continuidad de la cadena de control. |
 | EMM-VER-006 | Verificación post-merge de PR #11 / fundación de intake documental | PR #11 / `0a94b0c19826ee3028c2e24ab46c304d488ca1c9` | PASS | Verificación de integración de infraestructura y coherencia con Stage 4/F-01. No certifica la disponibilidad o autenticidad del paquete fuente sustantivo. |
-| EMM-VER-007 | Verificación pre-merge de PR #12 / Constitución, metadatos, autoridad y sincronización | PR #12 / rama `governance/EMM-CONSTITUTION-001` | PASS | Confirma coherencia interna de la propuesta, presencia de los cuatro instrumentos de continuidad y separación entre estado documental propuesto y aceptación de merge. Este PASS se limita al estado de la rama revisada y no equivale a la aprobación del merge ni a vigencia constitucional en `main`. |
+| EMM-VER-007 | Verificación pre-merge de PR #12 / Constitución, metadatos, autoridad y sincronización | PR #12 / head `cb90898ce8ec0413777f512b0c6ee92ae59fff79` | PASS | Confirma coherencia interna de la propuesta y presencia de los cuatro instrumentos de continuidad. La verificación se limitó a la rama antes del merge. |
+| EMM-VER-008 | Verificación post-merge de PR #12 / integración constitucional | PR #12 → `67d540bfcc00db3413432da334545bdf4204fb13` | PASS | Confirma que PR #12 quedó efectivamente integrado en `main` el `2026-08-18T18:08:57Z`. La activación normativa se documenta como evento posterior en PR #13. |
+| EMM-VER-009 | Verificación pre-merge de PR #13 / activación y control documental | PR #13 / rama `governance/EMM-OPS-001` | PASS | Confirma coherencia de la propuesta de activación, protocolo de control documental, registro de activación y sincronización de los cuatro instrumentos de continuidad. No representa todavía integración en `main`. |
 
 ## 4. Regla de interpretación
 
@@ -63,7 +65,9 @@ Cada PR que incorpore una modificación relevante debe actualizar dentro del mis
 - `repository-governance/TRACEABILITY_REGISTER.md`
 - `repository-governance/VERIFICATION_REGISTER.md`
 
-Antes del merge, el registro puede contener una verificación de la rama propuesta. El resultado de esa verificación no debe confundirse con la aceptación del merge. La integración efectiva se acredita mediante el evento Git correspondiente y, cuando proceda, mediante una verificación post-merge posterior.
+Antes del merge, el registro puede contener una verificación de la rama propuesta. El resultado de esa verificación no debe confundirse con la aceptación del merge. La integración efectiva se acredita mediante el evento Git correspondiente.
+
+Cuando una propuesta normativa haya sido integrada pero requiera que su estado documental pase de `Proposed` a `Active`, la corrección puede incorporarse en el siguiente PR sustantivo junto con su registro de activación; no se requiere un PR de mera limpieza.
 
 ## 6. Continuidad
 
