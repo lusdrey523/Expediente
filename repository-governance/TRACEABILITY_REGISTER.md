@@ -1,7 +1,7 @@
 ---
 id: EMM-TRACE-REGISTER-001
 title: Registro de Trazabilidad del EMM
-version: 0.8.0
+version: 0.8.1
 status: Active
 language: es-CL
 jurisdiction: Chile
@@ -63,7 +63,9 @@ Esta entrada registra la relación con el paquete fuente; no afirma que el ZIP e
 | Sincronización de infraestructura | `EMM-REPO-STATUS-002` | PR #9 → `b06badf304aaf8e1cf12af18538976fb57f84b0e` | Incorporado |
 | Reconciliación de infraestructura | `EMM-REPO-RECON-003` | PR #10 → `3cd9ba12c03d4c0a5b54d8ec6ddaf1159ae314b6` | Incorporado |
 | Fundamento de intake documental | `EMM-CASE-FOUNDATION-001` | PR #11 → `0a94b0c19826ee3028c2e24ab46c304d488ca1c9` | Incorporado |
-| Constitución y gobierno documental | `EMM-CONST-001` | PR #12 → head `04a3ea9c6fc86f8ee3749b12087911fd9bc2b960` | Proposed / pendiente de merge |
+| Constitución y gobierno documental | `EMM-CONST-001` | PR #12 → rama `governance/EMM-CONSTITUTION-001` | Proposed / pendiente de merge |
+
+Para PRs abiertos, la rama y el número de PR constituyen la referencia dinámica. El SHA exacto del head debe tomarse del estado de GitHub inmediatamente antes del merge y registrarse en el evento de integración, evitando que este registro se vuelva autorreferencialmente obsoleto por cada nuevo commit de la misma PR.
 
 ## 5. Modelo de trazabilidad
 
@@ -82,7 +84,7 @@ Cada PR que incorpore una modificación relevante debe actualizar dentro del mis
 3. `repository-governance/TRACEABILITY_REGISTER.md`
 4. `repository-governance/VERIFICATION_REGISTER.md`
 
-La actualización debe representar el estado correcto del PR: `Proposed/Pending` mientras esté abierto e `Incorporated` solamente después del merge efectivo. La verificación post-merge debe registrarse como evento controlado posterior cuando corresponda.
+La actualización debe representar el estado correcto del PR: `Proposed/Pending` mientras esté abierto e `Incorporated` solamente después del merge efectivo. La verificación de la rama puede registrarse antes del merge; la integración efectiva se acredita mediante el evento Git correspondiente.
 
 ## 7. Alcance actual
 
