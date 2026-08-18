@@ -1,7 +1,7 @@
 ---
 id: EMM-TRACE-REGISTER-001
 title: Registro de Trazabilidad del EMM
-version: 0.8.1
+version: 0.9.0
 status: Active
 language: es-CL
 jurisdiction: Chile
@@ -63,7 +63,10 @@ Esta entrada registra la relación con el paquete fuente; no afirma que el ZIP e
 | Sincronización de infraestructura | `EMM-REPO-STATUS-002` | PR #9 → `b06badf304aaf8e1cf12af18538976fb57f84b0e` | Incorporado |
 | Reconciliación de infraestructura | `EMM-REPO-RECON-003` | PR #10 → `3cd9ba12c03d4c0a5b54d8ec6ddaf1159ae314b6` | Incorporado |
 | Fundamento de intake documental | `EMM-CASE-FOUNDATION-001` | PR #11 → `0a94b0c19826ee3028c2e24ab46c304d488ca1c9` | Incorporado |
-| Constitución y gobierno documental | `EMM-CONST-001` | PR #12 → rama `governance/EMM-CONSTITUTION-001` | Proposed / pendiente de merge |
+| Constitución y gobierno documental | `EMM-CONST-001` | PR #12 → `67d540bfcc00db3413432da334545bdf4204fb13` | Incorporado |
+| Activación de gobierno documental | `EMM-GOV-OPS-001` | PR #13 → rama `governance/EMM-OPS-001` | Propuesto / pendiente de merge |
+
+PR #12 quedó efectivamente integrado en `main` el `2026-08-18T18:08:57Z`. Su head previo al merge fue `cb90898ce8ec0413777f512b0c6ee92ae59fff79`.
 
 Para PRs abiertos, la rama y el número de PR constituyen la referencia dinámica. El SHA exacto del head debe tomarse del estado de GitHub inmediatamente antes del merge y registrarse en el evento de integración, evitando que este registro se vuelva autorreferencialmente obsoleto por cada nuevo commit de la misma PR.
 
@@ -88,7 +91,7 @@ La actualización debe representar el estado correcto del PR: `Proposed/Pending`
 
 ## 7. Alcance actual
 
-La capa `repository-governance/` contiene los controles de PR, verificación, estado documental, trazabilidad, auditoría de integridad, arquitectura, roadmap, intake y gobernanza constitucional propuesta. La capa sustantiva permanece separada bajo `docs/`.
+La capa `repository-governance/` contiene los controles de PR, verificación, estado documental, trazabilidad, auditoría de integridad, arquitectura, roadmap, intake y gobernanza constitucional activa. La capa sustantiva permanece separada bajo `docs/`.
 
 La futura aplicación multicaso puede acoplarse a esta infraestructura, pero la interfaz no adquiere autoridad sobre los registros por el hecho de presentarlos.
 

@@ -102,16 +102,27 @@ Cada entrada describe cambios de infraestructura o control incorporados mediante
 - Actualización del roadmap para distinguir la fundación de intake ya definida de la incorporación sustantiva aún bloqueada por la disponibilidad verificable del paquete fuente.
 - No se incorpora evidencia sustantiva ni se inventan o reconstruyen archivos fuente a partir de memoria, prompts o nombres de archivo.
 
-## PR #12 — EMM-CONST-001 — Proposed
+## PR #12 — EMM-CONST-001
 
-**Estado:** propuesta abierta; no integrada en `main` al momento de esta actualización.
+**Hito:** integración de la Constitución Documental y del núcleo de gobernanza normativa.
 
-- Propone establecer una Constitución Documental y de Gobernanza para el proyecto completo.
-- Propone un estándar único de metadatos, idioma, nomenclatura y estados documentales.
-- Propone un modelo de autoridad, precedencia y separación de funciones.
-- Mantiene la distinción entre autoridad documental interna, autoridad legal y revisión profesional.
-- No incorpora evidencia sustantiva ni modifica hechos jurídicos.
-- Su estado normativo permanece `Proposed` hasta aprobación e integración controlada.
+- Integración de la Constitución Documental y de Gobernanza.
+- Integración del estándar común de metadatos.
+- Integración del modelo de autoridad y separación de funciones.
+- Actualización de los cuatro instrumentos de continuidad dentro del mismo PR.
+- Merge efectivo en `main` mediante commit `67d540bfcc00db3413432da334545bdf4204fb13` el `2026-08-18T18:08:57Z`.
+- La verificación pre-merge histórica permanece registrada como `PASS`; la activación normativa se registra como evento posterior en PR #13.
+
+## PR #13 — EMM-GOV-OPS-001
+
+**Estado:** propuesta de activación operativa; pendiente de integración en `main`.
+
+- Activa documentalmente la Constitución, el estándar de metadatos y el modelo de autoridad.
+- Incorpora `DOCUMENT_CONTROL_PROTOCOL.md` como protocolo operativo.
+- Incorpora `CONSTITUTION_ACTIVATION_RECORD.md` para registrar la decisión posterior a la integración de PR #12.
+- Define que `Active` es el estado vinculante de una norma vigente; `Approved` no es un estado documental independiente.
+- Sincroniza README, CHANGELOG, TRACEABILITY_REGISTER y VERIFICATION_REGISTER dentro del mismo PR.
+- Mantiene Stage 4/F-01 bloqueado hasta disponer del paquete fuente auditado verificable.
 
 ## Regla de continuidad
 

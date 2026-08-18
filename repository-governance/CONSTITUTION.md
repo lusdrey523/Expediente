@@ -1,16 +1,18 @@
 ---
 id: EMM-CONST-001
 title: Constitución Documental y de Gobernanza del Proyecto EMM
-version: 1.0.0
-status: Proposed
+version: 1.0.1
+status: Active
 language: es-CL
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
 document_type: constitution
 owner_role: Project Owner
-effective_date: null
+effective_date: 2026-08-18
 created_at: 2026-08-18
 last_updated_at: 2026-08-18
+related_pr: PR #12
+related_commit: 67d540bfcc00db3413432da334545bdf4204fb13
 ---
 
 # Constitución Documental y de Gobernanza del Proyecto EMM
@@ -109,7 +111,9 @@ Los commits de merge y registros históricos no deben editarse retrospectivament
 
 Un documento puede encontrarse, como mínimo, en los estados `Proposed`, `Active`, `Superseded`, `Deprecated` o `Archived`.
 
-`Proposed` no equivale a norma vigente. Una regla constitucional o política pasa a ser obligatoria únicamente cuando su estado de entrada en vigor haya sido registrado.
+`Proposed` representa una propuesta sin vigencia. La aprobación es un evento de decisión; cuando la aprobación se materializa mediante integración efectiva en `main`, el instrumento normativo correspondiente debe quedar en `Active` si entra en vigor.
+
+No se utiliza `Approved` como estado documental independiente.
 
 ## 9. Idioma y metadatos
 
@@ -137,6 +141,6 @@ Esta Constitución puede evolucionar, pero toda modificación debe conservar la 
 
 La compatibilidad futura con otros estándares es un objetivo arquitectónico. No crea actualmente subordinación, dependencia, incorporación ni autoridad externa sobre este proyecto.
 
-## 13. Gate de entrada
+## 13. Vigencia
 
-Esta versión se registra inicialmente como `Proposed`. Antes de declararse `Active` debe existir un evento de aprobación y, cuando corresponda, una verificación de consistencia con la infraestructura vigente.
+La versión 1.0.1 entra en vigor el 2026-08-18 mediante el evento de activación registrado en `repository-governance/CONSTITUTION_ACTIVATION_RECORD.md`, posterior a la integración efectiva de PR #12 en `main`.

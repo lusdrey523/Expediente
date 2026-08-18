@@ -1,8 +1,8 @@
 ---
 id: EMM-POL-AUTH-001
 title: Modelo de Autoridad y Separación de Funciones del Proyecto EMM
-version: 1.0.0
-status: Proposed
+version: 1.0.1
+status: Active
 language: es-CL
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
@@ -10,6 +10,9 @@ document_type: policy
 owner_role: Project Owner
 created_at: 2026-08-18
 last_updated_at: 2026-08-18
+effective_date: 2026-08-18
+related_pr: PR #12
+related_commit: 67d540bfcc00db3413432da334545bdf4204fb13
 ---
 
 # Modelo de Autoridad y Separación de Funciones del Proyecto EMM
@@ -52,6 +55,8 @@ Una modificación de la Constitución requiere:
 4. aprobación del Project Owner;
 5. verificación de integración;
 6. registro de versión y vigencia.
+
+La aprobación se considera materializada cuando el evento de decisión y la integración efectiva quedan registrados. El estado `Active` representa la vigencia posterior a esa materialización.
 
 ## 6. Cambios de evidencia
 
