@@ -12,10 +12,11 @@ GitHub funciona como infraestructura de trazabilidad y control de cambios. No su
 
 - **Repositorio:** `lusdrey523/Expediente`
 - **Rama principal:** `main`
-- **Último hito integrado:** PR #11 — `EMM-CASE-FOUNDATION-001`
-- **Estado de la capa Git y de gobernanza auditada:** PASS dentro del alcance definido por `INTEGRITY_AUDIT_EMM-001.md`.
-- **Cadena PR integrada:** PR #1 → PR #11.
-- **PR actualmente en revisión:** PR #12 — `EMM-CONST-001`, todavía no integrado.
+- **Último hito integrado:** PR #12 — `EMM-CONST-001`
+- **SHA actual de `main`:** `67d540bfcc00db3413432da334545bdf4204fb13`
+- **PR en ejecución:** PR #13 — `EMM-GOV-OPS-001`
+- **Estado de PR #13:** propuesta de activación operativa; todavía no integrada en `main`.
+- **Cadena PR integrada:** PR #1 → PR #12.
 - **Cadena de evidencia sustantiva:** preparada a nivel de control; su reconstrucción documental comienza de forma incremental en Stage 4.
 - **Cadena temporal:** preparada a nivel de infraestructura; la cronología fáctica debe reconstruirse separando tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
 
@@ -38,6 +39,7 @@ La separación evita confundir el gobierno del repositorio con el gobierno o con
 6. **Verificación explícita:** una incorporación documental no se considera equivalente a una verificación; ambas deben quedar identificadas por separado.
 7. **Interoperabilidad futura:** la infraestructura se diseña con convenciones claras y modulares para permitir su eventual adaptación a estándares externos o institucionales, sin crear dependencia actual respecto de ellos.
 8. **Normalización documental:** los nuevos documentos controlados deben seguir el estándar de idioma, nomenclatura y metadatos vigente; los históricos se normalizan mediante migraciones controladas.
+9. **Gobernanza activa:** la Constitución, el estándar de metadatos y el modelo de autoridad rigen la infraestructura una vez activados en `main`.
 
 ## Límites
 
@@ -49,7 +51,7 @@ El orden de evolución está definido en `repository-governance/ROADMAP.md`.
 
 La siguiente ejecución sustantiva corresponde a **Stage 4 / F-01 — Evidence register foundation**, cuya entrada está condicionada a disponer del paquete fuente auditado de forma verificable.
 
-La Constitución Documental y el modelo de gobernanza propuestos en PR #12 constituyen una capa transversal de gobierno. Mientras PR #12 permanezca abierto, sus instrumentos tienen estado `Proposed` y no deben tratarse como normas vigentes.
+PR #12 integró la Constitución Documental, el estándar de metadatos y el modelo de autoridad. PR #13 operacionaliza su activación y establece el protocolo de control documental sin incorporar evidencia sustantiva.
 
 La futura interfaz para abogado, autenticación segura y arquitectura multicaso se mantienen como etapas posteriores de arquitectura. No son parte del núcleo documental actual ni se confunde GitHub Pages con el límite de seguridad para información sensible.
 
