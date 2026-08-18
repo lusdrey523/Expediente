@@ -1,7 +1,7 @@
 ---
 id: EMM-REPO-ROADMAP-001
 title: EMM Repository and Documentary Evolution Roadmap
-version: 1.2.0
+version: 1.3.0
 status: Active
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
@@ -38,7 +38,7 @@ This roadmap is a planning and control document. A planned stage is not evidence
 
 - Audit Git/PR integrity.
 - Define evidence-chain requirements.
-- Define the separation of fact time, emission, acquisition, observation, incorporation, modification and verification time.
+- Define the separation of fact time, emission, acquisition, observation, incorporation, modification and verification.
 - Record that substantive evidence and factual chronology remain to be reconstructed.
 
 ### Stage 3 — Infrastructure synchronization and architectural separation
@@ -48,6 +48,17 @@ This roadmap is a planning and control document. A planned stage is not evidence
 - Maintain `README.md` and `CHANGELOG.md` as infrastructure representations.
 - Reconcile the state after each controlled infrastructure change.
 - Remove bootstrap-only artifacts once their historical existence is preserved by Git.
+
+### Governance activation layer — PR #13
+**Status: PROPOSED — PENDING MERGE**
+
+This is a transversal operational layer inside the existing governance foundation, not a new substantive documentary stage.
+
+- Activate the Constitution integrated by PR #12.
+- Activate the metadata standard and authority model.
+- Establish the operational document-control protocol.
+- Record the post-merge activation event without rewriting PR #12.
+- Maintain the four-instrument synchronization rule in the same PR.
 
 ### Stage 4 — Documentary reconstruction of the audited case package
 **Status: IN EXECUTION — F-01 INTAKE FOUNDATION**
@@ -150,7 +161,9 @@ Design conventions so that the system can later interoperate with broader instit
 
 **Current controlled gate:** Stage 4 / F-01 — Evidence register foundation.
 
-The intake foundation is now defined, but substantive reconstruction is blocked until the exact audited source package is available as a verifiable input. This is an intentional integrity gate, not an implementation failure.
+The intake foundation is defined and the governance foundation is integrated; substantive reconstruction remains blocked until the exact audited source package is available as a verifiable input. This is an intentional integrity gate, not an implementation failure.
+
+PR #13 does not claim completion of F-01. It only operationalizes the governance layer that must govern the subsequent intake.
 
 ## 4. Legacy audit-sequence relationship
 
