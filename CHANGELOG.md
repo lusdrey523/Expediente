@@ -95,6 +95,16 @@ Cada entrada describe cambios de infraestructura o control incorporados mediante
 - Confirmación de que la siguiente etapa es la reconstrucción documental incremental del expediente, antes de la capa de aplicación.
 - La futura interfaz para abogado, autenticación segura y arquitectura multicaso permanecen como arquitectura posterior; no forman parte de esta PR.
 
+## PR #11 — EMM-CASE-FOUNDATION-001
+
+**Hito:** entrada controlada a Stage 4 mediante la fundación de intake documental.
+
+- Creación de `docs/case-foundation/` como punto de entrada para la reconstrucción sustantiva.
+- Definición del control de intake, preservación y condiciones de bloqueo para F-01.
+- Actualización de `README.md` para reflejar PR #10 como último hito integrado y F-01 como siguiente ejecución controlada.
+- Actualización del roadmap para distinguir con precisión entre la fundación de intake ya definida y la incorporación sustantiva aún bloqueada por la disponibilidad verificable del paquete fuente.
+- No se incorpora evidencia sustantiva ni se inventan o reconstruyen archivos fuente a partir de memoria, prompts o nombres de archivo.
+
 ## Regla de continuidad
 
 Cada nueva evolución de infraestructura debe preservar la cadena histórica existente y documentar de forma explícita qué cambia, por qué cambia y mediante qué evento controlado se incorpora.

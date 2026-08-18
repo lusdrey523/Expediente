@@ -1,7 +1,7 @@
 ---
 id: EMM-REPO-ROADMAP-001
 title: EMM Repository and Documentary Evolution Roadmap
-version: 1.1.0
+version: 1.2.0
 status: Active
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
@@ -50,31 +50,42 @@ This roadmap is a planning and control document. A planned stage is not evidence
 - Remove bootstrap-only artifacts once their historical existence is preserved by Git.
 
 ### Stage 4 — Documentary reconstruction of the audited case package
-**Status: NEXT — NOT YET EXECUTED**
+**Status: IN EXECUTION — F-01 INTAKE FOUNDATION**
 
 Execute incrementally from the audited baseline, not by importing an uncontrolled bulk state.
 
 #### F-01 — Evidence register foundation
+**Status: INTAKE FOUNDATION ESTABLISHED — SOURCE PACKAGE REQUIRED**
 
-Create/reconcile the controlled evidence register and manifest against the audited source baseline.
+- Define the controlled intake boundary.
+- Define the mandatory source identification and SHA-256 verification sequence.
+- Establish the case-foundation entry point.
+- Do not incorporate substantive evidence until the audited source package is available as a verifiable input.
+
+**Blocking prerequisite:** the exact audited source package must be supplied or otherwise made available as a reproducible input. The repository must not infer or reconstruct source artifacts from memory, prompts or filenames alone.
 
 #### F-02 — Historical evidence/manifest reconciliation
+**Status: NOT STARTED**
 
 Reconcile existing historical EML/manifest/receipt records with the controlled register without silently rewriting historical records.
 
 #### F-03 — Metadata and provenance normalization
+**Status: NOT STARTED**
 
 Normalize the minimum metadata required to identify source, acquisition, preservation state, hash and relevant timestamps while preserving unknown values explicitly.
 
 #### F-04 — Stable identifiers and relationships
+**Status: NOT STARTED**
 
 Establish the next evidence/document identifiers and their relationships to the source package, facts and controlled documents.
 
 #### F-05 — Index and control layer
+**Status: NOT STARTED**
 
 Build the controlled index connecting evidence, documents, facts, verifications and repository events.
 
 #### F-06 — Temporal reconstruction
+**Status: NOT STARTED**
 
 Build the factual/documentary timeline with separate fields for:
 
@@ -87,10 +98,12 @@ Build the factual/documentary timeline with separate fields for:
 - time of verification.
 
 #### F-07 — FACT → EVIDENCE → DOCUMENT model
+**Status: NOT STARTED**
 
 Establish explicit links among factual assertions, supporting evidence and documentary artifacts. A link is not itself a legal conclusion.
 
 #### F-08 — Legal-question and lawyer-handoff preparation
+**Status: NOT STARTED**
 
 Register legal questions, documentary gaps and matters requiring professional review without prematurely converting them into definitive legal arguments. Prepare the material for lawyer review only after the underlying records are traceable.
 
@@ -135,11 +148,9 @@ Design conventions so that the system can later interoperate with broader instit
 
 ## 3. Current gate
 
-**Current controlled gate:** complete the documentary reconstruction foundation before building the application layer.
+**Current controlled gate:** Stage 4 / F-01 — Evidence register foundation.
 
-The immediate work is therefore documentary: evidence, facts, provenance, temporal controls, document relationships and lawyer-review questions.
-
-The web application, authentication and multicaso capabilities are downstream architecture and must not be allowed to displace the evidentiary/documentary reconstruction.
+The intake foundation is now defined, but substantive reconstruction is blocked until the exact audited source package is available as a verifiable input. This is an intentional integrity gate, not an implementation failure.
 
 ## 4. Legacy audit-sequence relationship
 
