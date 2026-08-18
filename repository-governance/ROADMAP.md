@@ -1,7 +1,7 @@
 ---
 id: EMM-REPO-ROADMAP-001
 title: EMM Repository and Documentary Evolution Roadmap
-version: 1.0.0
+version: 1.1.0
 status: Active
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
@@ -54,17 +54,49 @@ This roadmap is a planning and control document. A planned stage is not evidence
 
 Execute incrementally from the audited baseline, not by importing an uncontrolled bulk state.
 
-Initial controlled sequence:
+#### F-01 — Evidence register foundation
 
-1. Inventory and register the source documents/evidence.
-2. Establish or reconcile the `EVIDENCE_REGISTER` and evidence manifest.
-3. Preserve source hashes and provenance/receipt information.
-4. Establish the next stable evidence identifiers and relationships.
-5. Build the controlled evidence/document index.
-6. Reconstruct the factual timeline using explicit temporal fields.
-7. Build the FACT → EVIDENCE → DOCUMENT relationships.
-8. Record legal questions/issues without prematurely converting them into definitive legal arguments.
-9. Re-audit the integrated state and create a new persistent package/state snapshot when required by the operating procedure.
+Create/reconcile the controlled evidence register and manifest against the audited source baseline.
+
+#### F-02 — Historical evidence/manifest reconciliation
+
+Reconcile existing historical EML/manifest/receipt records with the controlled register without silently rewriting historical records.
+
+#### F-03 — Metadata and provenance normalization
+
+Normalize the minimum metadata required to identify source, acquisition, preservation state, hash and relevant timestamps while preserving unknown values explicitly.
+
+#### F-04 — Stable identifiers and relationships
+
+Establish the next evidence/document identifiers and their relationships to the source package, facts and controlled documents.
+
+#### F-05 — Index and control layer
+
+Build the controlled index connecting evidence, documents, facts, verifications and repository events.
+
+#### F-06 — Temporal reconstruction
+
+Build the factual/documentary timeline with separate fields for:
+
+- time of fact;
+- time of issuance;
+- time of acquisition;
+- time of observation;
+- time of incorporation;
+- time of modification;
+- time of verification.
+
+#### F-07 — FACT → EVIDENCE → DOCUMENT model
+
+Establish explicit links among factual assertions, supporting evidence and documentary artifacts. A link is not itself a legal conclusion.
+
+#### F-08 — Legal-question and lawyer-handoff preparation
+
+Register legal questions, documentary gaps and matters requiring professional review without prematurely converting them into definitive legal arguments. Prepare the material for lawyer review only after the underlying records are traceable.
+
+#### Reconstruction gate
+
+After F-01 through F-08, perform a controlled re-audit and produce the required persistent state/package according to the operating procedure. Do not treat the completion of the eight steps as automatic certification of every evidence item.
 
 ### Stage 5 — Legal review preparation
 **Status: FUTURE**
@@ -109,7 +141,13 @@ The immediate work is therefore documentary: evidence, facts, provenance, tempor
 
 The web application, authentication and multicaso capabilities are downstream architecture and must not be allowed to displace the evidentiary/documentary reconstruction.
 
-## 4. Continuity rule
+## 4. Legacy audit-sequence relationship
+
+The broader audit program previously defined phases for baseline/inventory, structure/metadata, chronology, evidence-to-claim analysis, primary evidence, EML controls, documentary consistency, red-team review, lawyer handoff and final submission gating.
+
+The current roadmap does not discard that sequence. It separates the **infrastructure prerequisite** from the **documentary execution**. F-01 through F-08 are the immediate controlled bridge into that broader sequence. Later audit gates remain downstream and must be executed only after their prerequisites are actually populated.
+
+## 5. Continuity rule
 
 Every completed stage must be represented by controlled changes and, where applicable, verification. Planned stages must not be described as completed until their acceptance state is recorded.
 
