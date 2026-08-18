@@ -115,14 +115,26 @@ Cada entrada describe cambios de infraestructura o control incorporados mediante
 
 ## PR #13 — EMM-GOV-OPS-001
 
-**Estado:** propuesta de activación operativa; pendiente de integración en `main`.
+**Hito:** activación del gobierno documental y del control operativo.
 
-- Activa documentalmente la Constitución, el estándar de metadatos y el modelo de autoridad.
-- Incorpora `DOCUMENT_CONTROL_PROTOCOL.md` como protocolo operativo.
-- Incorpora `CONSTITUTION_ACTIVATION_RECORD.md` para registrar la decisión posterior a la integración de PR #12.
-- Define que `Active` es el estado vinculante de una norma vigente; `Approved` no es un estado documental independiente.
-- Sincroniza README, CHANGELOG, TRACEABILITY_REGISTER y VERIFICATION_REGISTER dentro del mismo PR.
-- Mantiene Stage 4/F-01 bloqueado hasta disponer del paquete fuente auditado verificable.
+- Activación efectiva de la Constitución, el estándar de metadatos y el modelo de autoridad.
+- Incorporación de `DOCUMENT_CONTROL_PROTOCOL.md` como protocolo operativo.
+- Incorporación de `CONSTITUTION_ACTIVATION_RECORD.md` como registro de activación posterior a PR #12.
+- Definición de `Active` como estado vinculante de un instrumento normativo vigente; `Approved` no es un estado documental independiente.
+- Integración efectiva en `main` mediante commit `2233cb6f2c80ba474a171a467feab278906480a5` el `2026-08-18T19:18:15Z`.
+
+## PR #14 — EMM-F01-SOURCE-INTAKE-001
+
+**Estado:** propuesta en ejecución; pendiente de merge.
+
+**Hito previsto:** preparar el recibo controlado y la representación exacta del gate de F-01 antes de incorporar evidencia sustantiva.
+
+- Sincronizar el estado real de `main` después de PR #13.
+- Incorporar un registro de recepción de fuente que distinga identidad declarada, verificación independiente y disponibilidad efectiva.
+- Mantener bloqueada la incorporación sustantiva mientras el paquete fuente exacto no esté disponible como input verificable en el proceso de intake.
+- No reconstruir ni alterar archivos fuente a partir de memoria, prompts, nombres de archivo o registros históricos incompletos.
+- Actualizar los cuatro instrumentos de continuidad dentro del mismo PR.
+- Mantener separadas la infraestructura de gobierno y la documentación sustantiva del caso.
 
 ## Regla de continuidad
 
