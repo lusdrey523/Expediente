@@ -12,11 +12,10 @@ GitHub funciona como infraestructura de trazabilidad y control de cambios. No su
 
 - **Repositorio:** `lusdrey523/Expediente`
 - **Rama principal:** `main`
-- **Último hito integrado antes de PR #10:** PR #9 — `EMM-REPO-STATUS-002`
-- **PR #10:** reconciliación de infraestructura en curso; incluye la eliminación del artefacto bootstrap `1.md`.
+- **Último hito integrado:** PR #10 — `EMM-REPO-RECON-003`
 - **Estado de la capa Git y de gobernanza auditada:** PASS dentro del alcance definido por `INTEGRITY_AUDIT_EMM-001.md`.
-- **Cadena PR integrada:** PR #1 → PR #9.
-- **Cadena de evidencia sustantiva:** preparada a nivel de control, todavía pendiente de reconstrucción documental incremental.
+- **Cadena PR integrada:** PR #1 → PR #10.
+- **Cadena de evidencia sustantiva:** preparada a nivel de control; su reconstrucción documental comienza de forma incremental en la Stage 4.
 - **Cadena temporal:** control preparada a nivel de infraestructura; la cronología fáctica debe reconstruirse separando tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
 
 ## Arquitectura
@@ -44,7 +43,9 @@ La infraestructura demuestra principalmente **qué fue incorporado, cuándo fue 
 
 ## Roadmap
 
-El orden de evolución está definido en `repository-governance/ROADMAP.md`. La siguiente etapa es la reconstrucción documental incremental del expediente a partir del baseline auditado.
+El orden de evolución está definido en `repository-governance/ROADMAP.md`.
+
+La siguiente ejecución controlada corresponde a **Stage 4 / F-01 — Evidence register foundation**, cuyo primer objetivo es establecer la entrada verificable del paquete fuente auditado antes de incorporar evidencia sustantiva.
 
 La futura interfaz para abogado, autenticación segura y arquitectura multicaso se mantienen como etapas posteriores de arquitectura. No son parte del núcleo documental actual ni se confunde GitHub Pages con el límite de seguridad para información sensible.
 
