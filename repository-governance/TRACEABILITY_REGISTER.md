@@ -1,13 +1,13 @@
 ---
 id: EMM-TRACE-REGISTER-001
 title: EMM Traceability Register
-version: 0.6.0
+version: 0.7.0
 status: Active
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
 ownership: Luis Fernando Breto Ruiz
 created: 2026-08-17
-last_updated: 2026-08-17
+last_updated: 2026-08-18
 ---
 
 # EMM Traceability Register
@@ -32,6 +32,8 @@ Git history and Pull Requests are used as a traceability layer for controlled do
 | Bootstrap PR | PR #1 |
 | Bootstrap merge SHA | `b172d374785e062cf53cdb402650a5f211ec9954` |
 
+The later removal of `1.md` does not erase this historical bootstrap record. The file's prior existence remains recoverable through Git history and PR #1/PR #10.
+
 ## 3. Source expediente baseline
 
 The bootstrap process is linked to the previously audited EMM source package:
@@ -52,8 +54,12 @@ This repository entry records the relationship to that source package; it does n
 | Post-merge verification | `EMM-VER-002` | PR #3 → merge SHA `c84ae649fd6afca59f25533ed073867cffe1a9f5` | PASS WITH CONDITIONS |
 | Governance control integrity | `EMM-VER-003` | PR #4 → merge SHA `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a` | PASS |
 | Post-merge verification | `EMM-VER-004` | PR #5 → merge SHA `fdfd1e0a7d99f9566539be2ece3833640ddfb98d` | PASS |
-| Integrity / evidence-time-chain audit | `EMM-AUDIT-001` | PR #6 → controlled audit branch | PENDING PR acceptance |
-| Post-merge verification | `EMM-VER-005` | PR #6 → resulting merge SHA to be recorded after acceptance | PENDING |
+| Integrity / evidence-time-chain audit | `EMM-AUDIT-001` | PR #6 → merge SHA `e2f4442de7d77f9d217b1668c0f58a5765cfa8e3` | Incorporated |
+| Post-merge verification | `EMM-VER-005` | PR #6 / resulting state → verified in PR #6 | PASS |
+| Infrastructure status and CHANGELOG | `EMM-REPO-STATUS-001` | PR #7 → merge SHA `b8269471d5c6258f6fe9aff0b7e57102e67a41ba` | Incorporated |
+| Architecture separation | `EMM-REPO-ARCH-002` | PR #8 → merge SHA `87d48732e12fb04d0e1bd6e615a67f414c0231c7` | Incorporated |
+| Infrastructure state synchronization | `EMM-REPO-STATUS-002` | PR #9 → merge SHA `b06badf304aaf8e1cf12af18538976fb57f84b0e` | Incorporated |
+| Infrastructure reconciliation | `EMM-REPO-RECON-003` | PR #10 → pending merge | Pending acceptance |
 
 ## 5. Traceability model
 
@@ -65,18 +71,9 @@ A Git commit proves that a repository state existed at a particular point in his
 
 ## 6. Current governance layer
 
-The following minimum controls are incorporated through controlled change:
+The repository-governance layer currently contains the minimum controls for PR control, verification, document status, traceability, integrity auditing, architecture and controlled evolution. The roadmap is maintained in `repository-governance/ROADMAP.md`.
 
-1. `EMM-GOV-PR-001` — Pull Request Control Protocol.
-2. `EMM-GOV-VERIFICATION-001` — Verification Register.
-3. `EMM-GOV-STATUS-001` — Document Status Model.
-4. `EMM-VER-002` — Post-merge verification record for PR #2.
-5. `EMM-VER-003` — Governance control integrity verification.
-6. `EMM-VER-004` — Post-merge verification record for PR #4.
-7. `EMM-AUDIT-001` — Integrity and evidence/time-chain audit.
-8. `EMM-VER-005` — Post-merge verification record for PR #5.
-
-These controls are intentionally modular. They may be extended by later EMM governance without invalidating historical records.
+The substantive case layer remains separate under `docs/` and is not considered fully reconstructed merely because the governance infrastructure exists.
 
 ## 7. Scope boundary
 
