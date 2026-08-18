@@ -1,8 +1,8 @@
 ---
 id: EMM-STD-META-001
 title: Estándar de Metadatos Documentales del Proyecto EMM
-version: 1.0.0
-status: Proposed
+version: 1.0.1
+status: Active
 language: es-CL
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
@@ -10,6 +10,9 @@ document_type: standard
 owner_role: Repository Administrator
 created_at: 2026-08-18
 last_updated_at: 2026-08-18
+effective_date: 2026-08-18
+related_pr: PR #12
+related_commit: 67d540bfcc00db3413432da334545bdf4204fb13
 ---
 
 # Estándar de Metadatos Documentales del Proyecto EMM
@@ -59,6 +62,8 @@ Los campos no aplicables no deben inventarse. Deben omitirse o utilizar el valor
 ### status
 
 `Proposed`, `Active`, `Superseded`, `Deprecated`, `Archived`.
+
+La aprobación es un evento de decisión y no un valor adicional de `status`. Cuando un documento normativo aprobado entra en vigor, su estado documental es `Active`.
 
 ### language
 
