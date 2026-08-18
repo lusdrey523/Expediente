@@ -1,88 +1,99 @@
 ---
 id: EMM-TRACE-REGISTER-001
-title: EMM Traceability Register
-version: 0.7.0
+title: Registro de Trazabilidad del EMM
+version: 0.8.0
 status: Active
+language: es-CL
 jurisdiction: Chile
 system: Expediente Maestro Migratorio (EMM)
-ownership: Luis Fernando Breto Ruiz
-created: 2026-08-17
-last_updated: 2026-08-18
+document_type: register
+owner_role: Repository Administrator
+created_at: 2026-08-17
+last_updated_at: 2026-08-18
 ---
 
-# EMM Traceability Register
+# Registro de Trazabilidad del EMM
 
-## 1. Purpose
+## 1. Propósito
 
-This register establishes the auditable linkage between the Expediente Maestro Migratorio and the Git repository `lusdrey523/Expediente`.
+Este registro establece el vínculo auditable entre el Expediente Maestro Migratorio y el repositorio `lusdrey523/Expediente`.
 
-Git history and Pull Requests are used as a traceability layer for controlled documentary changes. They do not replace primary evidence, official records, or legal review.
+Git y los Pull Requests constituyen la capa de trazabilidad para cambios documentales controlados. No sustituyen evidencia primaria, registros oficiales ni revisión jurídica.
 
-## 2. Bootstrap record
+## 2. Registro bootstrap
 
-| Field | Value |
+| Campo | Valor |
 |---|---|
-| Bootstrap identifier | EMM-BOOTSTRAP-001 |
-| Repository | `lusdrey523/Expediente` |
-| Default branch | `main` |
-| Bootstrap branch | `traceability/EMM-BOOTSTRAP-001` |
-| Initial repository commit observed | `98691b7ca4578d9a2b4453a1953bdc9422db3abe` |
-| Initial commit timestamp | `2026-08-17T18:33:10Z` |
-| Initial commit content | `1.md` containing test content; retained as historical repository state |
-| Bootstrap PR | PR #1 |
-| Bootstrap merge SHA | `b172d374785e062cf53cdb402650a5f211ec9954` |
+| Identificador bootstrap | EMM-BOOTSTRAP-001 |
+| Repositorio | `lusdrey523/Expediente` |
+| Rama principal | `main` |
+| Rama bootstrap | `traceability/EMM-BOOTSTRAP-001` |
+| Commit inicial observado | `98691b7ca4578d9a2b4453a1953bdc9422db3abe` |
+| Timestamp inicial | `2026-08-17T18:33:10Z` |
+| Contenido inicial | `1.md`, contenido de prueba; conservado como estado histórico del repositorio |
+| PR bootstrap | PR #1 |
+| SHA de merge bootstrap | `b172d374785e062cf53cdb402650a5f211ec9954` |
 
-The later removal of `1.md` does not erase this historical bootstrap record. The file's prior existence remains recoverable through Git history and PR #1/PR #10.
+El retiro posterior de `1.md` no elimina este registro histórico. Su existencia anterior permanece recuperable mediante Git y PR #1/PR #10.
 
-## 3. Source expediente baseline
+## 3. Baseline del expediente fuente
 
-The bootstrap process is linked to the previously audited EMM source package:
+El bootstrap está vinculado al paquete fuente EMM previamente auditado:
 
-- Source package: `Legalbreto-main.zip`
+- Paquete fuente: `Legalbreto-main.zip`
 - SHA-256: `26f599f89d7e546deb53ad316123f16cf6683015547a7f5bc5eb2c99f628435f`
-- Reported inventory: 48 files
-- Bootstrap assessment: `EMM_SYSTEM_ASSESSMENT_001`
+- Inventario reportado: 48 archivos
+- Evaluación bootstrap: `EMM_SYSTEM_ASSESSMENT_001`
 
-This repository entry records the relationship to that source package; it does not assert that the ZIP itself is stored in this repository.
+Esta entrada registra la relación con el paquete fuente; no afirma que el ZIP esté almacenado en este repositorio.
 
-## 4. Controlled history
+## 4. Historial controlado
 
-| Control stage | Identifier | Git record | Result |
+| Etapa | Identificador | Registro Git | Estado |
 |---|---|---|---|
-| Bootstrap | `EMM-BOOTSTRAP-001` | PR #1 → merge SHA `b172d374785e062cf53cdb402650a5f211ec9954` | Incorporated |
-| Minimum governance layer | `EMM-TRACE-LAYER-002` | PR #2 → merge SHA `3f6b5222b82ac88241096a7d08cd9fbc96361199` | Incorporated |
-| Post-merge verification | `EMM-VER-002` | PR #3 → merge SHA `c84ae649fd6afca59f25533ed073867cffe1a9f5` | PASS WITH CONDITIONS |
-| Governance control integrity | `EMM-VER-003` | PR #4 → merge SHA `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a` | PASS |
-| Post-merge verification | `EMM-VER-004` | PR #5 → merge SHA `fdfd1e0a7d99f9566539be2ece3833640ddfb98d` | PASS |
-| Integrity / evidence-time-chain audit | `EMM-AUDIT-001` | PR #6 → merge SHA `e2f4442de7d77f9d217b1668c0f58a5765cfa8e3` | Incorporated |
-| Post-merge verification | `EMM-VER-005` | PR #6 / resulting state → verified in PR #6 | PASS |
-| Infrastructure status and CHANGELOG | `EMM-REPO-STATUS-001` | PR #7 → merge SHA `b8269471d5c6258f6fe9aff0b7e57102e67a41ba` | Incorporated |
-| Architecture separation | `EMM-REPO-ARCH-002` | PR #8 → merge SHA `87d48732e12fb04d0e1bd6e615a67f414c0231c7` | Incorporated |
-| Infrastructure state synchronization | `EMM-REPO-STATUS-002` | PR #9 → merge SHA `b06badf304aaf8e1cf12af18538976fb57f84b0e` | Incorporated |
-| Infrastructure reconciliation | `EMM-REPO-RECON-003` | PR #10 → pending merge | Pending acceptance |
+| Bootstrap | `EMM-BOOTSTRAP-001` | PR #1 → `b172d374785e062cf53cdb402650a5f211ec9954` | Incorporado |
+| Capa mínima de gobernanza | `EMM-TRACE-LAYER-002` | PR #2 → `3f6b5222b82ac88241096a7d08cd9fbc96361199` | Incorporado |
+| Verificación post-merge | `EMM-VER-002` | PR #3 → `c84ae649fd6afca59f25533ed073867cffe1a9f5` | PASS WITH CONDITIONS |
+| Integridad de control | `EMM-VER-003` | PR #4 → `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a` | PASS |
+| Verificación post-merge | `EMM-VER-004` | PR #5 → `fdfd1e0a7d99f9566539be2ece3833640ddfb98d` | PASS |
+| Auditoría integridad/evidencia-tiempo | `EMM-AUDIT-001` | PR #6 → `e2f4442de7d77f9d217b1668c0f58a5765cfa8e3` | Incorporado |
+| Verificación post-merge | `EMM-VER-005` | PR #6 / estado resultante | PASS |
+| Estado y CHANGELOG | `EMM-REPO-STATUS-001` | PR #7 → `b8269471d5c6258f6fe9aff0b7e57102e67a41ba` | Incorporado |
+| Separación arquitectónica | `EMM-REPO-ARCH-002` | PR #8 → `87d48732e12fb04d0e1bd6e615a67f414c0231c7` | Incorporado |
+| Sincronización de infraestructura | `EMM-REPO-STATUS-002` | PR #9 → `b06badf304aaf8e1cf12af18538976fb57f84b0e` | Incorporado |
+| Reconciliación de infraestructura | `EMM-REPO-RECON-003` | PR #10 → `3cd9ba12c03d4c0a5b54d8ec6ddaf1159ae314b6` | Incorporado |
+| Fundamento de intake documental | `EMM-CASE-FOUNDATION-001` | PR #11 → `0a94b0c19826ee3028c2e24ab46c304d488ca1c9` | Incorporado |
+| Constitución y gobierno documental | `EMM-CONST-001` | PR #12 → head `04a3ea9c6fc86f8ee3749b12087911fd9bc2b960` | Proposed / pendiente de merge |
 
-## 5. Traceability model
+## 5. Modelo de trazabilidad
 
-Each future controlled change should be represented through the following chain where applicable:
+Cada cambio controlado debe poder representarse, cuando corresponda, mediante:
 
-`Source evidence → Documentary interpretation → Controlled document → Git commit → Pull Request → Verification → Accepted state`
+`Fuente → Interpretación documental → Documento controlado → Commit Git → Pull Request → Verificación → Estado aceptado`
 
-A Git commit proves that a repository state existed at a particular point in history. A Pull Request additionally records the proposed change, its rationale, review discussion and acceptance/rejection outcome.
+Un commit demuestra que un estado del repositorio existió en un punto de la historia. Un Pull Request añade la propuesta de cambio, su justificación, revisión y resultado de aceptación/rechazo.
 
-## 6. Current governance layer
+## 6. Regla de sincronización
 
-The repository-governance layer currently contains the minimum controls for PR control, verification, document status, traceability, integrity auditing, architecture and controlled evolution. The roadmap is maintained in `repository-governance/ROADMAP.md`.
+Cada PR que incorpore una modificación relevante debe actualizar dentro del mismo PR los cuatro instrumentos de continuidad:
 
-The substantive case layer remains separate under `docs/` and is not considered fully reconstructed merely because the governance infrastructure exists.
+1. `README.md`
+2. `CHANGELOG.md`
+3. `repository-governance/TRACEABILITY_REGISTER.md`
+4. `repository-governance/VERIFICATION_REGISTER.md`
 
-## 7. Scope boundary
+La actualización debe representar el estado correcto del PR: `Proposed/Pending` mientras esté abierto e `Incorporated` solamente después del merge efectivo. La verificación post-merge debe registrarse como evento controlado posterior cuando corresponda.
 
-This traceability layer does not certify legal facts, evidence authenticity, immigration eligibility, or legal conclusions. Those matters require source-linked documentary verification and, where appropriate, independent legal review.
+## 7. Alcance actual
 
-This boundary is an explicit scope definition and must not be treated as a failure of the traceability mechanism.
+La capa `repository-governance/` contiene los controles de PR, verificación, estado documental, trazabilidad, auditoría de integridad, arquitectura, roadmap, intake y gobernanza constitucional propuesta. La capa sustantiva permanece separada bajo `docs/`.
 
-## 8. Continuity rule
+La futura aplicación multicaso puede acoplarse a esta infraestructura, pero la interfaz no adquiere autoridad sobre los registros por el hecho de presentarlos.
 
-Historical records should be preserved. Corrections and superseding assessments must be represented as new controlled changes rather than silently rewriting the historical record.
+## 8. Límite
 
-Lifecycle completion of a record that was explicitly created as `PENDING` is a controlled state transition, not a retroactive alteration of the underlying historical event.
+Este registro no certifica hechos jurídicos, autenticidad material de evidencia, elegibilidad migratoria ni conclusiones legales. Es una representación controlada de la historia documental y técnica del proyecto.
+
+## 9. Continuidad
+
+Los eventos históricos se preservan. Correcciones y evaluaciones posteriores deben representarse como nuevos cambios controlados, no como reescritura silenciosa de la historia anterior.

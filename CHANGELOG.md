@@ -90,10 +90,8 @@ Cada entrada describe cambios de infraestructura o control incorporados mediante
 - Retiro de `1.md`, archivo auxiliar utilizado durante el bootstrap inicial.
 - Preservación de su existencia histórica mediante Git y los registros PR #1/PR #10.
 - Incorporación de `repository-governance/ROADMAP.md` para separar explícitamente etapas completadas, pendientes y futuras.
-- Sincronización del README con el estado real inmediatamente anterior a PR #10.
 - Reconciliación del registro de trazabilidad hasta PR #10 sin reescribir los eventos anteriores.
 - Confirmación de que la siguiente etapa es la reconstrucción documental incremental del expediente, antes de la capa de aplicación.
-- La futura interfaz para abogado, autenticación segura y arquitectura multicaso permanecen como arquitectura posterior; no forman parte de esta PR.
 
 ## PR #11 — EMM-CASE-FOUNDATION-001
 
@@ -101,12 +99,24 @@ Cada entrada describe cambios de infraestructura o control incorporados mediante
 
 - Creación de `docs/case-foundation/` como punto de entrada para la reconstrucción sustantiva.
 - Definición del control de intake, preservación y condiciones de bloqueo para F-01.
-- Actualización de `README.md` para reflejar PR #10 como último hito integrado y F-01 como siguiente ejecución controlada.
-- Actualización del roadmap para distinguir con precisión entre la fundación de intake ya definida y la incorporación sustantiva aún bloqueada por la disponibilidad verificable del paquete fuente.
+- Actualización del roadmap para distinguir la fundación de intake ya definida de la incorporación sustantiva aún bloqueada por la disponibilidad verificable del paquete fuente.
 - No se incorpora evidencia sustantiva ni se inventan o reconstruyen archivos fuente a partir de memoria, prompts o nombres de archivo.
+
+## PR #12 — EMM-CONST-001 — Proposed
+
+**Estado:** propuesta abierta; no integrada en `main` al momento de esta actualización.
+
+- Propone establecer una Constitución Documental y de Gobernanza para el proyecto completo.
+- Propone un estándar único de metadatos, idioma, nomenclatura y estados documentales.
+- Propone un modelo de autoridad, precedencia y separación de funciones.
+- Mantiene la distinción entre autoridad documental interna, autoridad legal y revisión profesional.
+- No incorpora evidencia sustantiva ni modifica hechos jurídicos.
+- Su estado normativo permanece `Proposed` hasta aprobación e integración controlada.
 
 ## Regla de continuidad
 
 Cada nueva evolución de infraestructura debe preservar la cadena histórica existente y documentar de forma explícita qué cambia, por qué cambia y mediante qué evento controlado se incorpora.
+
+Los PR abiertos pueden registrarse expresamente como `Proposed` o `Pending`; nunca deben representarse como integrados antes de su aceptación y merge efectivo.
 
 Las etapas planificadas no deben presentarse como completadas hasta que exista un cambio controlado y, cuando corresponda, una verificación de aceptación.
