@@ -1,7 +1,7 @@
 ---
 id: EMM-GOV-VERIFICATION-001
 title: Registro de Verificaciones del EMM
-version: 0.6.0
+version: 0.6.1
 status: Active
 language: es-CL
 jurisdiction: Chile
@@ -46,7 +46,7 @@ Cada evento de verificación debe identificar, cuando corresponda:
 | EMM-VER-004 | Verificación post-merge de PR #4 | PR #4 / `4b416ee6e00a1f08ecd08fda9fa47a05e01fbf5a`; verificado mediante PR #5 | PASS | Cerrado mediante el estado controlado de PR #5. |
 | EMM-VER-005 | Verificación post-merge de PR #5 y estado resultante de `main` | PR #5 / `fdfd1e0a7d99f9566539be2ece3833640ddfb98d` | PASS | Confirma integración de PR #5 y continuidad de la cadena de control. |
 | EMM-VER-006 | Verificación post-merge de PR #11 / fundación de intake documental | PR #11 / `0a94b0c19826ee3028c2e24ab46c304d488ca1c9` | PASS | Verificación de integración de infraestructura y coherencia con Stage 4/F-01. No certifica la disponibilidad o autenticidad del paquete fuente sustantivo. |
-| EMM-VER-007 | Estado propuesto de PR #12 / Constitución, metadatos y autoridad | PR #12 / head `04a3ea9c6fc86f8ee3749b12087911fd9bc2b960` | PENDING | Esta entrada registra el objeto de verificación previsto. PR #12 aún no está integrado en `main`; no se presenta como aceptación final. |
+| EMM-VER-007 | Verificación pre-merge de PR #12 / Constitución, metadatos, autoridad y sincronización | PR #12 / rama `governance/EMM-CONSTITUTION-001` | PASS | Confirma coherencia interna de la propuesta, presencia de los cuatro instrumentos de continuidad y separación entre estado documental propuesto y aceptación de merge. Este PASS se limita al estado de la rama revisada y no equivale a la aprobación del merge ni a vigencia constitucional en `main`. |
 
 ## 4. Regla de interpretación
 
@@ -63,10 +63,10 @@ Cada PR que incorpore una modificación relevante debe actualizar dentro del mis
 - `repository-governance/TRACEABILITY_REGISTER.md`
 - `repository-governance/VERIFICATION_REGISTER.md`
 
-Antes del merge, el PR debe figurar como `Proposed` o `PENDING`. Después del merge, el estado de integración se registra mediante un evento controlado de verificación. No se debe representar un PR abierto como `PASS` definitivo.
+Antes del merge, el registro puede contener una verificación de la rama propuesta. El resultado de esa verificación no debe confundirse con la aceptación del merge. La integración efectiva se acredita mediante el evento Git correspondiente y, cuando proceda, mediante una verificación post-merge posterior.
 
 ## 6. Continuidad
 
 Los registros de verificación son orientados a anexado. Las entradas históricas no deben reescribirse silenciosamente para reflejar conclusiones posteriores. Correcciones o evaluaciones supervinientes deben registrarse como nuevos eventos vinculados al registro anterior.
 
-El cierre de un estado `PENDING` es una transición controlada del ciclo de vida cuando conserva el identificador, objetivo y contexto histórico originales.
+El cambio de estado de una verificación debe conservar su identificador, objetivo y contexto histórico originales.
