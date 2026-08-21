@@ -1,7 +1,7 @@
 ---
 id: EMM-GOV-VERIFICATION-001
 title: Registro de Verificaciones del EMM
-version: 0.8.0
+version: 0.9.0
 status: Active
 language: es-CL
 jurisdiction: Chile
@@ -9,7 +9,7 @@ system: Expediente Maestro Migratorio (EMM)
 document_type: register
 owner_role: Verifier
 created_at: 2026-08-17
-last_updated_at: 2026-08-18
+last_updated_at: 2026-08-20
 ---
 
 # Registro de Verificaciones del EMM
@@ -51,6 +51,7 @@ Cada evento de verificación debe identificar, cuando corresponda:
 | EMM-VER-009 | Verificación pre-merge de PR #13 / activación y control documental | PR #13 / head `310314e41faa44745da49c04ea2de4aa246218b4` | PASS | Confirmó coherencia de la propuesta de activación y sus cuatro instrumentos de continuidad. |
 | EMM-VER-010 | Verificación post-merge de PR #13 / activación del gobierno documental | PR #13 → `2233cb6f2c80ba474a171a467feab278906480a5` | PASS | Confirma integración efectiva en `main` el `2026-08-18T19:18:15Z` y que la Constitución/protocolo/modelo de autoridad quedaron activos conforme al alcance declarado. |
 | EMM-VER-011 | Verificación pre-merge de PR #14 / preparación de intake F-01 | PR #14 / rama `documentary/EMM-F01-SOURCE-INTAKE-001` | PASS | Confirma sincronización de infraestructura, registro de PR14, gate de fuente y ausencia de afirmación de recepción/verificación del paquete. No certifica disponibilidad del paquete fuente. |
+| EMM-VER-012 | Verificación post-merge de PR #14 / integración del control de intake F-01 | PR #14 → `b60e055d91846f746d4eb063f1248e3101bcc940` | PASS | Confirma integración efectiva en `main` el `2026-08-18T19:52:58Z`. Confirma que el gate F-01 permanece en INTAKE CONTROL ESTABLISHED — SOURCE RECEIPT REQUIRED y que no se incorporó evidencia sustantiva ni se afirmó recepción del paquete fuente. |
 
 ## 4. Regla de interpretación
 
@@ -67,7 +68,7 @@ Cada PR que incorpore una modificación relevante debe actualizar dentro del mis
 - `repository-governance/TRACEABILITY_REGISTER.md`
 - `repository-governance/VERIFICATION_REGISTER.md`
 
-Antes del merge, el registro puede contener una verificación de la rama propuesta. La integración efectiva se acredita únicamente mediante el evento Git correspondiente. Para PR #14, la entrada EMM-VER-011 verifica la propuesta y no representa que PR #14 ya esté integrado.
+Antes del merge, el registro puede contener una verificación de la rama propuesta. La integración efectiva se acredita únicamente mediante el evento Git correspondiente.
 
 El estado `Active` de un instrumento normativo depende de su vigencia efectiva en `main`; `Approved` no se utiliza como estado documental independiente.
 

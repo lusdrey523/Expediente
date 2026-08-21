@@ -1,7 +1,7 @@
 ---
 id: EMM-REPO-ROADMAP-001
 title: Hoja de Ruta de Evolución del Repositorio y Documentación EMM
-version: 1.4.0
+version: 1.5.0
 status: Active
 language: es-CL
 jurisdiction: Chile
@@ -9,7 +9,7 @@ system: Expediente Maestro Migratorio (EMM)
 document_type: roadmap
 owner_role: Project Owner
 created_at: 2026-08-18
-last_updated_at: 2026-08-18
+last_updated_at: 2026-08-20
 ---
 
 # Hoja de Ruta de Evolución del Repositorio y Documentación EMM
@@ -78,7 +78,7 @@ Ejecutar incrementalmente desde el baseline auditado, no mediante una importaci�
 - Inventariar sus archivos sin modificar el contenido fuente.
 - Crear el primer registro controlado de evidencia solamente después de verificar el input.
 
-PR #14 establece la capa de recibo y el gate operativo. No afirma que el paquete fuente haya sido recibido, re-hasheado o verificado dentro de esta PR.
+PR #14 estableció la capa de recibo y el gate operativo. Quedó integrado en `main` mediante `b60e055d91846f746d4eb063f1248e3101bcc940` el `2026-08-18T19:52:58Z`. No afirma que el paquete fuente haya sido recibido, re-hasheado o verificado.
 
 **Blocking prerequisite:** el paquete fuente auditado exacto debe estar disponible como input reproducible y verificable. El repositorio no debe inferir ni reconstruir artefactos fuente a partir de memoria, prompts o nombres de archivo.
 
@@ -170,7 +170,7 @@ Diseñar convenciones para permitir interoperabilidad posterior con estándares 
 
 La infraestructura de intake y gobierno está establecida. El recibo y la verificación del paquete fuente exacto siguen siendo el bloqueo material antes de la incorporación sustantiva.
 
-PR #14 no declara completado F-01; establece el control necesario para recibir y verificar el input antes de incorporar evidencia.
+PR #14 quedó integrado. El estado del gate permanece **INTAKE CONTROL ESTABLISHED — SOURCE RECEIPT REQUIRED**.
 
 ## 4. Relación con la secuencia de auditoría histórica
 
