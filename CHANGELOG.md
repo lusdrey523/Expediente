@@ -125,16 +125,23 @@ Cada entrada describe cambios de infraestructura o control incorporados mediante
 
 ## PR #14 — EMM-F01-SOURCE-INTAKE-001
 
-**Estado:** propuesta en ejecución; pendiente de merge.
+**Hito:** establecimiento del control de recepción del paquete fuente para Stage 4/F-01.
 
-**Hito previsto:** preparar el recibo controlado y la representación exacta del gate de F-01 antes de incorporar evidencia sustantiva.
+- Sincronización de los cuatro instrumentos de continuidad con el estado de `main` posterior a PR #13.
+- Creación de `docs/case-foundation/SOURCE_PACKAGE_RECEIPT.md` para distinguir identidad histórica declarada de recepción efectiva verificada.
+- Actualización del ROADMAP para representar el gate F-01 como **INTAKE CONTROL ESTABLISHED — SOURCE RECEIPT REQUIRED**.
+- Mantenimiento explícito del bloqueo contra reconstrucción por memoria, prompts o nombres de archivo.
+- No se afirma que el paquete fuente haya sido recibido, re-hasheado o verificado durante este PR.
+- Integración efectiva en `main` mediante commit `b60e055d91846f746d4eb063f1248e3101bcc940` el `2026-08-18T19:52:58Z`.
 
-- Sincronizar el estado real de `main` después de PR #13.
-- Incorporar un registro de recepción de fuente que distinga identidad declarada, verificación independiente y disponibilidad efectiva.
-- Mantener bloqueada la incorporación sustantiva mientras el paquete fuente exacto no esté disponible como input verificable en el proceso de intake.
-- No reconstruir ni alterar archivos fuente a partir de memoria, prompts, nombres de archivo o registros históricos incompletos.
-- Actualizar los cuatro instrumentos de continuidad dentro del mismo PR.
-- Mantener separadas la infraestructura de gobierno y la documentación sustantiva del caso.
+## PR #15 (este cambio) — EMM-POSTMERGE-014
+
+**Hito:** sincronización post-merge de PR #14 y registro de verificación de integración.
+
+- Actualización de los cuatro instrumentos de continuidad para reflejar el SHA real de `main` tras el merge de PR #14.
+- Registro de la verificación post-merge EMM-VER-012.
+- Confirmación de que el gate F-01 permanece en **INTAKE CONTROL ESTABLISHED — SOURCE RECEIPT REQUIRED**.
+- Sin incorporación de evidencia sustantiva ni modificación del bloqueo por falta de paquete fuente verificable.
 
 ## Regla de continuidad
 

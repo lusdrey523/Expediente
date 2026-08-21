@@ -1,7 +1,7 @@
 ---
 id: EMM-TRACE-REGISTER-001
 title: Registro de Trazabilidad del EMM
-version: 1.0.0
+version: 1.1.0
 status: Active
 language: es-CL
 jurisdiction: Chile
@@ -9,7 +9,7 @@ system: Expediente Maestro Migratorio (EMM)
 document_type: register
 owner_role: Repository Administrator
 created_at: 2026-08-17
-last_updated_at: 2026-08-18
+last_updated_at: 2026-08-20
 ---
 
 # Registro de Trazabilidad del EMM
@@ -45,7 +45,7 @@ El bootstrap está vinculado al paquete fuente EMM previamente auditado:
 - Inventario reportado: 48 archivos
 - Evaluación asociada: `EMM_SYSTEM_ASSESSMENT_001`
 
-Esta entrada registra la relación histórica con el paquete fuente. No afirma que el ZIP esté almacenado en este repositorio ni que haya sido re-recibido y re-hasheado durante PR #14.
+Esta entrada registra la relación histórica con el paquete fuente. No afirma que el ZIP esté almacenado en este repositorio ni que haya sido re-recibido y re-hasheado durante PR #14 o posteriores.
 
 ## 4. Historial controlado
 
@@ -65,13 +65,14 @@ Esta entrada registra la relación histórica con el paquete fuente. No afirma q
 | Fundamento de intake documental | `EMM-CASE-FOUNDATION-001` | PR #11 → `0a94b0c19826ee3028c2e24ab46c304d488ca1c9` | Incorporado |
 | Constitución y gobierno documental | `EMM-CONST-001` | PR #12 → `67d540bfcc00db3413432da334545bdf4204fb13` | Incorporado |
 | Activación de gobierno documental | `EMM-GOV-OPS-001` | PR #13 → `2233cb6f2c80ba474a171a467feab278906480a5` | Incorporado |
-| Preparación de intake F-01 | `EMM-F01-SOURCE-INTAKE-001` | PR #14 → rama `documentary/EMM-F01-SOURCE-INTAKE-001` | Propuesto / pendiente de merge |
+| Preparación de intake F-01 | `EMM-F01-SOURCE-INTAKE-001` | PR #14 → `b60e055d91846f746d4eb063f1248e3101bcc940` | Incorporado |
+| Sincronización post-merge PR #14 | `EMM-POSTMERGE-014` | PR #15 (este cambio) | Propuesto |
 
 PR #12 quedó integrado en `main` el `2026-08-18T18:08:57Z`.
 
 PR #13 quedó integrado en `main` el `2026-08-18T19:18:15Z`, produciendo el SHA `2233cb6f2c80ba474a171a467feab278906480a5`.
 
-Para PRs abiertos, la rama y el número de PR constituyen la referencia dinámica. El SHA exacto del head debe tomarse del estado de GitHub inmediatamente antes del merge y registrarse en el evento de integración, evitando que este registro se vuelva autorreferencialmente obsoleto por cada nuevo commit de la misma PR.
+PR #14 quedó integrado en `main` el `2026-08-18T19:52:58Z`, produciendo el SHA `b60e055d91846f746d4eb063f1248e3101bcc940`.
 
 ## 5. Modelo de trazabilidad
 

@@ -12,12 +12,12 @@ GitHub funciona como infraestructura de trazabilidad y control de cambios. No su
 
 - **Repositorio:** `lusdrey523/Expediente`
 - **Rama principal:** `main`
-- **SHA actual de `main`:** `2233cb6f2c80ba474a171a467feab278906480a5`
-- **Último hito integrado:** PR #13 — `EMM-GOV-OPS-001`
-- **Integración de PR #13:** `2026-08-18T19:18:15Z`
-- **Cadena PR integrada:** PR #1 → PR #13.
-- **PR en ejecución:** PR #14 — `EMM-F01-SOURCE-INTAKE-001`
-- **Cadena de evidencia sustantiva:** preparada a nivel de control; F-01 continúa condicionado a la recepción verificable del paquete fuente auditado.
+- **SHA actual de `main`:** `b60e055d91846f746d4eb063f1248e3101bcc940`
+- **Último hito integrado:** PR #14 — `EMM-F01-SOURCE-INTAKE-001`
+- **Integración de PR #14:** `2026-08-18T19:52:58Z`
+- **Cadena PR integrada:** PR #1 → PR #14.
+- **PR en ejecución:** ninguno (sincronización post-merge en curso mediante este cambio).
+- **Cadena de evidencia sustantiva:** control de intake establecido; F-01 permanece condicionado a la recepción verificable del paquete fuente auditado.
 - **Cadena temporal:** preparada a nivel de infraestructura; la cronología fáctica debe reconstruirse separando tiempo del hecho, emisión, adquisición, observación, incorporación, modificación y verificación.
 
 ## Arquitectura
@@ -50,7 +50,7 @@ La infraestructura demuestra principalmente **qué fue incorporado, cuándo fue 
 
 El orden de evolución está definido en `repository-governance/ROADMAP.md`.
 
-El gate actual es **Stage 4 / F-01 — Evidence register foundation**. PR #11 estableció el intake; PR #12 estableció la Constitución; PR #13 activó el gobierno documental. PR #14 prepara el recibo controlado del paquete fuente sin afirmar que dicho paquete haya sido recibido o verificado en esta rama.
+El gate actual es **Stage 4 / F-01 — Evidence register foundation**. PR #11 estableció el intake; PR #12 estableció la Constitución; PR #13 activó el gobierno documental; PR #14 estableció el control de recepción del paquete fuente. El estado del gate permanece **INTAKE CONTROL ESTABLISHED — SOURCE RECEIPT REQUIRED**.
 
 La futura interfaz para abogado, autenticación segura y arquitectura multicaso permanecen como etapas posteriores. GitHub Pages puede servir como presentación, pero no constituye por sí mismo una frontera de autenticación para información sensible.
 
